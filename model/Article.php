@@ -43,7 +43,8 @@ class Article{
     public Function NbrArticle(){
         $db = $this->db;
 
-        return  $this->db->exec("SELECT COUNT(*) FROM article");
+        $reponse = $db->query("SELECT COUNT(*) FROM article");
+        return $reponse->fetch($db::FETCH_ASSOC)["COUNT(*)"];
     }
     public function ajouterArticle($titre,$contenu,$image,$date,$idEditeur)
     {

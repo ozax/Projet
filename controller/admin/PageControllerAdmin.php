@@ -16,14 +16,6 @@ class PageControllerAdmin
         require './view/admin/pages.php';
     }
 
-    public function countPage(){
-
-        $page = new Page();
-        $page = $page->NbrPage();
-
-        require './view/admin/tableau-de-bord.php';
-
-    }
 
 
 }

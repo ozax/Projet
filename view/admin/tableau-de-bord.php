@@ -7,7 +7,7 @@
         <div class="col-md-3">
 
             <div class="well dash-box">
-                <h2><span class="glyphicon glyphicon-pencil icon" aria-hidden="true"></span> 33</h2>
+                <h2><span class="glyphicon glyphicon-pencil icon" aria-hidden="true"></span> <?=$nbrArticle?></h2>
                 <h4>Articles</h4>
             </div>
         </div>

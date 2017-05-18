@@ -22,8 +22,8 @@ class Router{
 
         switch ($p){
             case 'tableau-de-bord' :{
-                $page = new PageControllerAdmin();
-                $page = $page->countPage();
+                $dashaboard = new DashboardControllerAdmin();
+                $dashaboard->showHome();
 
 
                 break;
