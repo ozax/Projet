@@ -43,14 +43,19 @@ class Router{
                 break;
             }
             case 'replay' :{
-                require './view/replay.php';
+             $emission = new EmissionController();
+             $emission->showEmission();
                 break;
             }
             case 'grille' :{
-                require './view/grille.php';
-                break;
+
+               $programme = new ProgrammeController();
+               $programme->showProgramme();
+
+
             }
             case 'direct' :{
+
                 require './view/live.php';
                 break;
             }
@@ -59,6 +64,7 @@ class Router{
                 break;
             }
             case 'recherche' :{
+
                 require './view/search.php';
                 break;
             }
@@ -75,6 +81,7 @@ class Router{
                 require './view/404.php';
                 break;
             }
+
             default :{
                 header("Location: $repertory/404");
                 break;

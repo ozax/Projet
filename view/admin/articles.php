@@ -7,33 +7,18 @@
             <thead> <tr>
                 <th>Titre :</th>
                 <th>Publié par :</th>
-                <th>Date de publication :</th>
+                <th>Publié le :</th>
                 <th>Action :</th>
             </tr></thead>
+            <?php foreach($article as $article): ?>
             <tr>
-                <td>Blog Post 1</td>
-                <td>Blog Post 1</td>
-                <td>Dec 12, 2016</td>
-                <td><a class="btn btn-default" href="marticle.html"><!--en cliquant sure le bouton ,la page de modification (qui est la méme que la page d'ajout) va s'afficher avec un formulaire en affichant les ancien champs déja remplits  --><abbr title='Modifier'><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></abbr></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sarticle"><abbr title='Supprimer'<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></abbr></a></td>
+                <td><?=$article["titre"]?></td>
+                <td></td>
+                <td><?=$article["datePublication"]?></td>
+                <td><a class="btn btn-default" href="./admin.php?p=articles&edit='<?=$article["idArticle"]?>" <abbr title='Modifier'><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></abbr></a> <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#myModal='<?$article["idArticle"]?><abbr title='Supprimer'<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></abbr></a></td>
             </tr>
-            <tr>
-                <td>Blog Post 2</td>
-                <td>Blog Post 1</td>
-                <td>Dec 13, 2016</td>
-                <td><a class="btn btn-default" href="marticle.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sarticle"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-            </tr>
-            <tr>
-                <td>Blog Post 3</td>
-                <td>Blog Post 1</td>
-                <td>Dec 13, 2016</td>
-                <td><a class="btn btn-default" href="marticle.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sarticle"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-            </tr>
-            <tr>
-                <td>Blog Post 4</td>
-                <td>Blog Post 1</td>
-                <td>Dec 14, 2016</td>
-                <td><a class="btn btn-default" href="marticle.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sarticle"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-            </tr>
+            <?php endforeach; ?>
+
         </table>
     </div>
 </div>

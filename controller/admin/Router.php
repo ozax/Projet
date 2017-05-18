@@ -1,6 +1,9 @@
 <?php
 namespace controller\admin;
 
+
+
+
 use model\Article;
 
 class Router{
@@ -12,14 +15,15 @@ class Router{
             $p = $_GET["p"];
         else
             $p = 'tableau-de-bord';
-        echo '<pre>';
-        var_dump($p);
-        echo '</pre>';
+
+
+
         ob_start();
 
         switch ($p){
             case 'tableau-de-bord' :{
-                require './view/admin/tableau-de-bord.php';
+                $page = new PageControllerAdmin();
+                $page = $page->countPage();
 
 
                 break;
@@ -27,44 +31,111 @@ class Router{
             case 'articles' :{
                 if(isset($_GET['edit'])){
                     if(isset($_GET['id'])){
-                        require './view/admin/edit-article.php';
+                        $article = new ArticleControllerAdmin();
+                        $article->ajouterArticle();
+
+
                     }else {
+
+
+
                         require './view/admin/edit-article.php';
+
+
                     }
                 }else{
-                    require './view/admin/articles.php';
+                    $article= new ArticleControllerAdmin();
+                    $article->showArticle();
+
+
+
                 }
 
 
                 break;
             }
             case 'emissions' :{
-                require './view/replay.php';
+                if(isset($_GET['edit'])){
+                    if(isset($_GET['id'])){
+
+                        require './view/admin/edit-emission.php';
+                    }else {
+                        require './view/admin/edit-emission.php';
+                    }
+                }else{
+                    $emission = new EmissionControllerAdmin();
+                    $emission->showEmission();
+
+                }
+
+
                 break;
             }
             case 'programmes' :{
-                require './view/grille.php';
+                if(isset($_GET['edit'])){
+                    if(isset($_GET['id'])){
+                        require './view/admin/edit-programme.php';
+                    }else {
+                        require './view/admin/edit-programme.php';
+                    }
+                }else{
+
+                    $programme = new ProgrammeControllerAdmin();
+                    $programme->showProgramme();
+                }
+
+
                 break;
             }
             case 'pages' :{
-                require './view/live.php';
+                if(isset($_GET['edit'])){
+                    if(isset($_GET['id'])){
+                        require './view/admin/edit-page.php';
+                    }else {
+                        require './view/admin/edit-page.php';
+                    }
+                }else{
+                  $page = new PageControllerAdmin();
+                  $page = $page->showAllPage();
+                }
+
+
                 break;
             }
             case 'messages' :{
-                require './view/contact.php';
+                require './view/admin/messages.php';
                 break;
             }
-            case 'editeurs' :{
-                require './view/search.php';
-                break;
-            }
-            case 'profile' :{
 
-                break;
+             case 'editeurs' :{
+            if(isset($_GET['edit'])){
+                if(isset($_GET['id'])){
+                    require './view/admin/add-editeur.php';
+                }else {
+                    require './view/admin/add-editeur.php';
+                }
+            }else{
+                $editeur = new EditeurControllerAdmin();
+                $editeur->showEditor();
+
             }
+
+
+            break;
+        }
+
+
+
 
 
         }
+
+
+
+
+
+
+
         $content = ob_get_clean();
         require './view/admin/template.php';
     }

@@ -29,34 +29,19 @@
                 <th>Heure-Fin :</th>
                 <th>Action :</th>
             </tr></thead>
-            <tr>
-                <td>Blog Post 1</td>
-                <td>Dec 12, 2016</td>
-                <td>22h30</td>
-                <td>22h30</td>
-                <td><a class="btn btn-default" href="mprogramme.html"><!--en cliquant sure le bouton ,la page de modification (qui est la méme que la page d'ajout) va s'afficher avec un formulaire en affichant les ancien champs déja remplits  --><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sprogramme"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-            </tr>
-            <tr>
-                <td>Blog Post 2</td>
-                <td>Dec 13, 2016</td>
-                <td>22h30</td>
-                <td>22h30</td>
-                <td><a class="btn btn-default" href="mprogramme.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sprogramme"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-            </tr>
-            <tr>
-                <td>Blog Post 3</td>
-                <td>Dec 13, 2016</td>
-                <td>22h30</td>
-                <td>22h30</td>
-                <td><a class="btn btn-default" href="mprogramme.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sprogramme"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-            </tr>
-            <tr>
-                <td>Blog Post 4</td>
-                <td>Dec 14, 2016</td>
-                <td>22h30</td>
-                <td>22h30</td>
-                <td><a class="btn btn-default" href="mprogramme.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sprogramme"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-            </tr>
+            <?php foreach ($programme as $programme):?>
+                <tr>
+                    <td><?=$programme["sujet"]?></td>
+                    <td><?=$programme["datePublication"]?></td>
+                    <td><?=$programme["heurDebut"]?></td>
+                    <td><?=$programme["heurFin"]?></td>
+                    <td><a class="btn btn-default" href="./admin.php?p=programmes&edit='<?=$programme["idProgramme"]?>"><!--en cliquant sure le bouton ,la page de modification (qui est la méme que la page d'ajout) va s'afficher avec un formulaire en affichant les ancien champs déja remplits  --><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sprogramme"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
+                </tr>
+            <?php endforeach;?>
+
+
+
+
         </table>
     </div>
 </div>

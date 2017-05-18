@@ -11,29 +11,13 @@
                 <th>E-mail</th>
                 <th>Action :</th>
             </tr></thead>
+            <?php foreach ($editeur as $editeur):?>
             <tr>
-                <td>Jhon</td>
-                <td>Smith</td>
-                <td>exempl@exemple.com</td>
-                <td><a class="btn btn-default" href="mediteur.html"><!--en cliquant sure le bouton ,la page de modification (qui est la méme que la page d'ajout) va s'afficher avec un formulaire en affichant les ancien champs déja remplits  --><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sediteur"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td></tr>
-            <tr>
-                <td>Jhon</td>
-                <td>Smith</td>
-                <td>exempl@exemple.com</td>
-                <td><a class="btn btn-default" href="mediteur.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sediteur"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td></tr>
-            </tr>
-            <tr>
-                <td>Jhon</td>
-                <td>Smith</td>
-                <td>exempl@exemple.com</td>
-                <td><a class="btn btn-default" href="mediteur.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sediteur"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td></tr>
-            </tr>
-            <tr>
-                <td>Jhon</td>
-                <td>Smith</td>
-                <td>exempl@exemple.com</td>
-                <td><a class="btn btn-default" href="mediteur.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sediteur"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td></tr>
-            </tr>
+                <td><?=$editeur["nom"]?></td>
+                <td><?=$editeur["prenom"]?></td>
+                <td><?=$editeur["email"]?></td>
+                <td><a class="btn btn-default" href=./admin.php?p=editeurs&edit='<?=$editeur["idEditeur"]?>"><!--en cliquant sure le bouton ,la page de modification (qui est la méme que la page d'ajout) va s'afficher avec un formulaire en affichant les ancien champs déja remplits  --><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sediteur"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td></tr>
+            <?php endforeach;?>
         </table>
     </div>
 </div>

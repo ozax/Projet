@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,8 +20,8 @@
                 <img class="pull-left" src="<?=$repertory ?>/static/images/logo-69x71.png" alt="Logo radio Soummam" />
                 <div class="pull-left">
                     <h1>RADIO SOUMMAM</h1>
+
                     <i>Yidwen, yal ass</i>
-                </div>
             </div>
         </a>
         <div class="phone navbar-right hidden-sm hidden-xs">

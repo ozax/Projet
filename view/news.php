@@ -17,7 +17,7 @@
                                         <h4 class="news-title"><?=$article["titre"]?></h4>
                                         </a>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta congue eros, pharetra elementum nunc. Vivamus eleifend convallis turpis amet...<a class="news-read" href="#">Lire la suite</a>
+                                          <?=substr(strip_tags($article["contenu"]), 0, 150)?>...<a class="news-read" href="#">Lire la suite</a>
                                         </p>
                                         <i>Publiée le <?=$article["datePublication"]?></i>
                                     </div>

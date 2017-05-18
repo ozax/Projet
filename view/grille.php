@@ -16,46 +16,22 @@
         <!-- Wrapper général -->
         <div class="timeline">
             <!-- Wrapper d'un article -->
+            <?php foreach($programme as $programme): ?>
             <section class="timeline-item">
                 <div class="timeline-item-details">
-                    <time class="timeline-item-details-date">19H:00 à 20H:15</time>
+                    <time class="timeline-item-details-date"><?=$programme["heurDebut"]?> à <?=$programme["heurFin"]?></time>
                     <!-- Marqueur -->
                     <div class="timeline-item-details-marker"></div>
                     <!-- Contenu -->
                     <div class="timeline-item-details-description">
-                        <h2>Sabah Elkheir Soummam</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod, velit et placerat cursus, leo dolor accumsan turpis, ac auctor nulla massa in sapien</p>
+                        <h2><?=$programme["sujet"]?></h2>
+                        <p><?=$programme["description"]?></p>
                     </div>
                 </div>
             </section>
             <hr class="visible-xs"/>
-            <section class="timeline-item">
-                <div class="timeline-item-details">
-                    <time class="timeline-item-details-date">19H:00 à 20H:15</time>
-                    <!-- Marqueur -->
-                    <div class="timeline-item-details-marker"></div>
-                    <!-- Contenu -->
-                    <div class="timeline-item-details-description">
-                        <h2>Revue de Presse (Rediffusion)</h2>
-                        <p>Conseils de Prévention Routière</p>
-                    </div>
-                </div>
-            </section>
-            <hr class="visible-xs"/>
+            <?php endforeach; ?>
 
-            <section class="timeline-item">
-                <div class="timeline-item-details">
-                    <time class="timeline-item-details-date">19H:00 à 20H:15</time>
-                    <!-- Marqueur -->
-                    <div class="timeline-item-details-marker"></div>
-                    <!-- Contenu -->
-                    <div class="timeline-item-details-description">
-                        <h2>Conseils de Prévention Routière</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod, velit et placerat cursus, leo dolor accumsan turpis, ac auctor nulla massa in sapien</p>
-                    </div>
-                </div>
-            </section>
-            <hr class="visible-xs"/>
 
         </div>
 

@@ -23,22 +23,22 @@
             <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm">
                 <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
                 </li>
-                <li><a href="article.html">Articles</a>
+                <li><a href="?p=articles&edit">Articles</a>
                 </li>
-                <li><a href="emission.html">Emissions</a>
+                <li><a href="?p=emissions&edit">Emissions</a>
                 </li>
-                <li><a href="programme.html">Programmes</a>
+                <li><a href="?p=programmes&edit">Programmes</a>
                 </li>
-                <li><a href="page.html">Pages</a>
+                <li><a href="?p=pages&edit">Pages</a>
                 </li>
-                <li><a href="editeur.html">Editeurs</a>
+                <li><a href="?p=editeurs&edit">Editeurs</a>
                 </li>
-                <li><a href="message.html">Messages</a>
+                <li><a href="?p=messages&edit">Messages</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-left hidden-xs">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
-                <li><a href="message.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
+                <li><a href=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
+                <li><a href=""><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
                 <li><a target="_blank" href="<?=$repertory?>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Aller vers le site</a>
                 </li></ul>
             <ul class="nav navbar-nav navbar-right">
@@ -73,11 +73,18 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li> <a href="aarticle.html"> Article</a></li>
-                        <li> <a href="aemission.html"> Emission</a></li>
-                        <li> <a href="aprogramme.html"> Programme</a></li>
-                        <li><a href="apage.html"> Page</a></li>
-                        <li> <a href="aediteur.html"> Editeur</a></li>
+                        <li><a href="?p=articles&edit">Article</a>
+                        </li>
+                        <li><a href="?p=emissions&edit">Emission</a>
+                        </li>
+                        <li><a href="?p=programmes&edit">Programme</a>
+                        </li>
+                        <li><a href="?p=pages&edit">Page</a>
+                        </li>
+                        <li><a href="?p=editeurs&edit">Editeur</a>
+                        </li>
+                        <li><a href="?p=messages&edit">Message</a>
+                        </li>
                     </ul>
                 </div>
             </div>

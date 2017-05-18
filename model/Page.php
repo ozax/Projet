@@ -31,6 +31,13 @@ class Page{
         return $reponse->fetch($db::FETCH_ASSOC);
     }
 
+    public Function NbrPage(){
+        $db = $this->db;
+        return  $this->db->exec("SELECT COUNT(*) as nbr FROM page");
+
+
+    }
+
 }
 
 ?>
