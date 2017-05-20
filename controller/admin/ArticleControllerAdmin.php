@@ -50,11 +50,7 @@ class ArticleControllerAdmin
         $article = new Article();
         $article = $article->deleteArticle($_GET["idArticle"]);
     }
-    public function nbrArticle(){
 
-        $article = new Article();
-        $article = $article->NbrArticle();
-    }
 
 
 }

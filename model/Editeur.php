@@ -40,4 +40,11 @@ class Editeur
         ));
     }
 
+    public Function NbrEditeur(){
+        $db = $this->db;
+
+        $reponse = $db->query("SELECT COUNT(*) FROM editeur");
+        return $reponse->fetch($db::FETCH_ASSOC)["COUNT(*)"];
+    }
+
 }

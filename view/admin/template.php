@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse navbar-menubuilder">
             <!-- partie afficher uniquement sure portable -->
             <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
+                <li><a href="?p=programmes&edit"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
                 </li>
                 <li><a href="?p=articles&edit">Articles</a>
                 </li>
@@ -38,7 +38,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-left hidden-xs">
                 <li><a href=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
-                <li><a href=""><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
+                <li><a href="?p=messages&edit"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
                 <li><a target="_blank" href="<?=$repertory?>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Aller vers le site</a>
                 </li></ul>
             <ul class="nav navbar-nav navbar-right">
@@ -48,7 +48,7 @@
                         <span>Profil</span>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="mprofil.html"><span class="glyphicon glyphicon-pencil"></span> Modifier Profil</a>
+                        <li><a href=""><span class="glyphicon glyphicon-pencil"></span> Modifier Profil</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="login.html"><span class="glyphicon glyphicon-off red"></span> Se deconnecter</a>

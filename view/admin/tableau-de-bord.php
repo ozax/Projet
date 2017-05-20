@@ -13,13 +13,13 @@
         </div>
         <div class="col-md-3">
             <div class="well dash-box">
-                <h2><span class="glyphicon glyphicon-list-alt icon" aria-hidden="true"></span>12</h2>
+                <h2><span class="glyphicon glyphicon-list-alt icon" aria-hidden="true"></span> <?=$nbrPage?></h2>
                 <h4>Pages</h4>
             </div>
         </div>
         <div class="col-md-3">
             <div class="well dash-box">
-                <h2><span class="glyphicon glyphicon-user icon" aria-hidden="true"></span> 203</h2>
+                <h2><span class="glyphicon glyphicon-user icon" aria-hidden="true"></span> <?=$nbrEdit?></h2>
                 <h4>Editeurs</h4>
             </div>
         </div>

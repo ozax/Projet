@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="7ea89700-c407-44f1-aa02-478abab61429" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ArticleController.php" afterPath="$PROJECT_DIR$/controller/ArticleController.php" />
 =======
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/admin/PageControllerAdmin.php" afterPath="$PROJECT_DIR$/controller/admin/PageControllerAdmin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/admin/Router.php" afterPath="$PROJECT_DIR$/controller/admin/Router.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Article.php" afterPath="$PROJECT_DIR$/model/Article.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/tableau-de-bord.php" afterPath="$PROJECT_DIR$/view/admin/tableau-de-bord.php" />
+<<<<<<< HEAD
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
+=======
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,8 +99,13 @@
         <entry file="file://$PROJECT_DIR$/controller/admin/DashboardControllerAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="884">
               <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+=======
+            <state relative-caret-position="242">
+              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
 =======
             <state relative-caret-position="242">
               <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
@@ -110,10 +121,13 @@
         <entry file="file://$PROJECT_DIR$/view/admin/tableau-de-bord.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="-25">
               <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
 =======
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
             <state relative-caret-position="0">
               <caret line="9" column="109" lean-forward="false" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
               <folding>
@@ -124,11 +138,15 @@
                 <marker date="1495147901829" expanded="true" signature="2112:2252" ph="..." />
                 <marker date="1495147901829" expanded="true" signature="2269:2407" ph="..." />
               </folding>
+<<<<<<< HEAD
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
+=======
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="ProgrammeController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/ProgrammeController.php">
@@ -136,10 +154,27 @@
             <state relative-caret-position="51">
               <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
               <folding />
+=======
+      <file leaf-file-name="Article.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="29" />
+              <folding>
+                <marker date="1495147799617" expanded="true" signature="435:480" ph="SELECT * FRO... article" />
+                <marker date="1495147799617" expanded="true" signature="651:704" ph="SELECT * FRO... article" />
+                <marker date="1495147799617" expanded="true" signature="872:912" ph="SELECT * FRO... article" />
+                <marker date="1495147799617" expanded="true" signature="1067:1095" ph="SELECT COUNT... article" />
+                <marker date="1495147799617" expanded="true" signature="1306:1424" ph="INSERT INTO `article`... " />
+                <marker date="1495147799617" expanded="true" signature="1784:1906" ph="UPDATE artic... " />
+                <marker date="1495147799617" expanded="true" signature="2204:2266" ph="DELETE FROM " />
+              </folding>
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Router.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/admin/Router.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -169,6 +204,11 @@
       <file leaf-file-name="ModelArticle.php" pinned="false" current-in-tab="false">
         <entry file="file://D:/htdocs/back/openclassrooms/blog-mvc/model/ModelArticle.php">
           <provider selected="true" editor-type-id="text-editor">
+=======
+      <file leaf-file-name="ModelArticle.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/htdocs/back/openclassrooms/blog-mvc/model/ModelArticle.php">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
             <state relative-caret-position="418">
               <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="37" selection-end-column="61" />
               <folding>
@@ -257,7 +297,11 @@
         <option value="$PROJECT_DIR$/model/Article.php" />
         <option value="$PROJECT_DIR$/view/admin/tableau-de-bord.php" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/controller/ArticleController.php" />
+=======
+        <option value="$PROJECT_DIR$/controller/admin/DashboardControllerAdmin.php" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
 =======
         <option value="$PROJECT_DIR$/controller/admin/DashboardControllerAdmin.php" />
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
@@ -294,7 +338,10 @@
     </navigator>
     <panes>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
 =======
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
       <pane id="Scratches" />
@@ -321,7 +368,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
               <option name="myItemId" value="view" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -355,6 +405,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+<<<<<<< HEAD
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,6 +421,40 @@
             <PATH_ELEMENT>
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
               <option name="myItemId" value="controller" />
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="radio-soummam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="radio-soummam" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="radio-soummam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="radio-soummam" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,6 +495,9 @@
 <<<<<<< HEAD
 =======
       <pane id="Scope" />
+<<<<<<< HEAD
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
+=======
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
     </panes>
   </component>
@@ -592,7 +680,11 @@
       <workItem from="1495016847969" duration="7680000" />
       <workItem from="1495116671612" duration="1284000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1495150314557" duration="650000" />
+=======
+      <workItem from="1495146914494" duration="983000" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
 =======
       <workItem from="1495146914494" duration="983000" />
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
@@ -601,7 +693,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="142946000" />
+=======
+    <option name="totallyTimeSpent" value="143279000" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
 =======
     <option name="totallyTimeSpent" value="143279000" />
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
@@ -620,6 +716,7 @@
     <editor active="true" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24009146" sideWeight="0.4902439" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34358975" sideWeight="0.49695122" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34358975" sideWeight="0.5030488" order="6" side_tool="true" content_ui="tabs" />
@@ -629,6 +726,11 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359882" sideWeight="0.4902439" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34358975" sideWeight="0.49695122" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34358975" sideWeight="0.5030488" order="6" side_tool="true" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359882" sideWeight="0.4902439" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34358975" sideWeight="0.49695122" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34358975" sideWeight="0.5030488" order="6" side_tool="true" content_ui="tabs" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1600295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
@@ -679,6 +781,7 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/model/Editeur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -705,6 +808,9 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="dbDummy://dbtable:/e1c6692a/850bc52b-0632-4e36-b58e-d89fe64cde07/radio-soummam.editeur" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
 =======
     <entry file="dbDummy://dbtable:/e1c6692a/850bc52b-0632-4e36-b58e-d89fe64cde07/radio-soummam.editeur" />
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
@@ -783,6 +889,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="dbDummy://dbtable:/e1c6692a/850bc52b-0632-4e36-b58e-d89fe64cde07/radio-soummam.emission">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -795,6 +902,9 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="dbDummy://dbtable:/e1c6692a/850bc52b-0632-4e36-b58e-d89fe64cde07/radio-soummam.emission" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
 =======
     <entry file="dbDummy://dbtable:/e1c6692a/850bc52b-0632-4e36-b58e-d89fe64cde07/radio-soummam.emission" />
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
@@ -834,6 +944,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="dbDummy://dbtable:/e1c6692a/850bc52b-0632-4e36-b58e-d89fe64cde07/radio-soummam.article">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -849,6 +960,9 @@
 =======
     <entry file="dbDummy://dbtable:/e1c6692a/850bc52b-0632-4e36-b58e-d89fe64cde07/radio-soummam.article" />
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
+=======
+    <entry file="dbDummy://dbtable:/e1c6692a/850bc52b-0632-4e36-b58e-d89fe64cde07/radio-soummam.article" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
     <entry file="file://$PROJECT_DIR$/controller/Router.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -857,15 +971,21 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/controller/admin/post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
           <caret line="37" column="1" lean-forward="false" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
 =======
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
     <entry file="file://$PROJECT_DIR$/controller/ProgrammeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+<<<<<<< HEAD
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
+=======
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
         </state>
       </provider>
@@ -930,9 +1050,12 @@
     <entry file="file://$PROJECT_DIR$/model/Page.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="312">
           <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
 =======
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
         <state relative-caret-position="748">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
@@ -949,9 +1072,12 @@
     <entry file="file://$PROJECT_DIR$/controller/admin/Post.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="375">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
 =======
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
         <state relative-caret-position="814">
           <caret line="37" column="1" lean-forward="false" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
           <folding />
@@ -962,6 +1088,7 @@
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="884">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
@@ -969,6 +1096,11 @@
             <marker date="1495054260837" expanded="true" signature="550:584" ph="SELECT * FRO... page" />
             <marker date="1495054260837" expanded="true" signature="737:769" ph="SELECT COUNT... page" />
           </folding>
+=======
+        <state relative-caret-position="154">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="35" />
+          <folding />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
         </state>
       </provider>
     </entry>
@@ -989,6 +1121,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/admin/PageControllerAdmin.php">
+<<<<<<< HEAD
 >>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1010,28 +1143,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/admin/Router.php">
->>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
+=======
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="308">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
           <folding />
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/controller/admin/Router.php">
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+=======
+    <entry file="file://$PROJECT_DIR$/controller/admin/ProgrammeControllerAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/controller/admin/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/controller/admin/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/controller/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-25">
@@ -1048,6 +1201,14 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://D:/htdocs/back/openclassrooms/blog-mvc/model/ModelAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1491646809252" expanded="true" signature="224:248" ph="SELECT whoIA... admin" />
+            <marker date="1491646809252" expanded="true" signature="433:456" ph="SELECT email... admin" />
 =======
     <entry file="file://D:/htdocs/back/openclassrooms/blog-mvc/model/ModelAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1088,10 +1249,46 @@
             <marker date="1495147799617" expanded="true" signature="1306:1424" ph="INSERT INTO `article`... " />
             <marker date="1495147799617" expanded="true" signature="1784:1906" ph="UPDATE artic... " />
             <marker date="1495147799617" expanded="true" signature="2204:2266" ph="DELETE FROM " />
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://D:/htdocs/back/openclassrooms/blog-mvc/model/ModelArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="37" selection-end-column="61" />
+          <folding>
+            <marker date="1492696298957" expanded="true" signature="251:273" ph="SELECT * FRO... articles" />
+            <marker date="1492696298957" expanded="true" signature="446:492" ph="SELECT * FRO... articles" />
+            <marker date="1492696298957" expanded="true" signature="662:712" ph="SELECT title... articles" />
+            <marker date="1492696298957" expanded="true" signature="887:916" ph="SELECT COUNT... articles" />
+            <marker date="1492696298957" expanded="true" signature="1108:1183" ph="INSERT INTO articles... " />
+            <marker date="1492696298957" expanded="true" signature="1401:1477" ph="UPDATE artic... " />
+            <marker date="1492696298957" expanded="true" signature="1678:1726" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="29" />
+          <folding>
+            <marker date="1495147799617" expanded="true" signature="435:480" ph="SELECT * FRO... article" />
+            <marker date="1495147799617" expanded="true" signature="651:704" ph="SELECT * FRO... article" />
+            <marker date="1495147799617" expanded="true" signature="872:912" ph="SELECT * FRO... article" />
+            <marker date="1495147799617" expanded="true" signature="1067:1095" ph="SELECT COUNT... article" />
+            <marker date="1495147799617" expanded="true" signature="1306:1424" ph="INSERT INTO `article`... " />
+            <marker date="1495147799617" expanded="true" signature="1784:1906" ph="UPDATE artic... " />
+            <marker date="1495147799617" expanded="true" signature="2204:2266" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 056f1840ae1d6c77c1d82855f5106753f5c0d8ee
     <entry file="file://$PROJECT_DIR$/view/admin/tableau-de-bord.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
