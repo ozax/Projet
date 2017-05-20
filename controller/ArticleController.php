@@ -13,7 +13,7 @@ class ArticleController
         $articlesChunks = array_chunk($articles->getLatestArticle(), 3);
         require './view/home-news.php';
     }
-//sssss
+
     public function showArticle($id){
         require "./config/config.php";
         $article = new Article();
