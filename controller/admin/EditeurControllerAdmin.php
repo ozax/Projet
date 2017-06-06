@@ -20,11 +20,12 @@ class EditeurControllerAdmin
     }
 
     public function ajouterEditeur(){
-
+        if (isset($_POST["nom"])){
         $editeur = new Editeur();
-        $editeur = $editeur->ajouterEditeur($_POST["nom"],$_POST["prenom"],$_POST["email"],$_POST["motDePasse"]);
+        $editeur = $editeur->ajouterEditeur(htmlspecialchars ($_POST["nom"]),$_POST["prenom"],$_POST["email"]);
     }
-
+    require './view/admin/add-editeur.php';
+    }
 
 
 

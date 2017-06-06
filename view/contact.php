@@ -61,7 +61,7 @@
                                     <div class="input-group-addon">
                                         <span class="glyphicon glyphicon-book"></span>
                                     </div>
-                                    <input name="sujet" class="form-control" placeholder="Sujet" type="text" required>
+                                    <input name="sujet" class="form-control" placeholder="Objet" type="text" required>
                                 </div>
                             </div>
                         </div>

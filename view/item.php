@@ -6,7 +6,7 @@
                     <a href="<?=$repertory ?>/actualites/<?=$article["idArticle"]?>">
                         <h3><?= $article["titre"] ?></h3>
                     </a>
-                    <i>Publiée le <?= $article["datePublication"] ?> | Par <?=$editeur["nom"].' '. $editeur["nom"] ?></i>
+                    <i>Publiée le <?= $article["datePublication"] ?> | Par <?=$editeur["nom"].' '. $editeur["prenom"] ?></i>
                     <a href="<?=$repertory ?>/actualites/<?=$article["idArticle"]?>">
                         <div class="news-img" style="background-image: url('<?=$repertory ?><?= $article["image"] ?>');">
                         </div>

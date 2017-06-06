@@ -4,6 +4,7 @@ namespace controller\admin;
 
 use model\Article;
 use model\Editeur;
+use model\Message;
 use model\Page;
 
 class DashboardControllerAdmin {
@@ -16,6 +17,9 @@ class DashboardControllerAdmin {
 
         $editeurObj = new Editeur();
         $nbrEdit = $editeurObj->NbrEditeur();
+
+        $messageObj = new Message();
+        $nbrMsg = $messageObj->NbrMessage();
 
         require './view/admin/tableau-de-bord.php';
 

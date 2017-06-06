@@ -4,7 +4,10 @@ namespace controller\admin;
 
 
 
+use Controller\EmissionController;
+use controller\PageContoller;
 use model\Article;
+use model\Editeur;
 
 class Router{
     public function __construct()
@@ -24,6 +27,8 @@ class Router{
             case 'tableau-de-bord' :{
                 $dashaboard = new DashboardControllerAdmin();
                 $dashaboard->showHome();
+                $message = new MessageControllerAdmin();
+                $message = $message->showAllmessages();
 
 
                 break;
@@ -31,17 +36,12 @@ class Router{
             case 'articles' :{
                 if(isset($_GET['edit'])){
                     if(isset($_GET['id'])){
-                        $article = new ArticleControllerAdmin();
-                        $article->ajouterArticle();
 
 
                     }else {
-
-
-
-                        require './view/admin/edit-article.php';
-
-
+                        $article = new ArticleControllerAdmin();
+                        $article->ajouterArticle ();
+break;
                     }
                 }else{
                     $article= new ArticleControllerAdmin();
@@ -54,19 +54,25 @@ class Router{
 
                 break;
             }
+            case 'profile':{
+                require './view/admin/profile.php';
+                break;
+            }
             case 'emissions' :{
                 if(isset($_GET['edit'])){
                     if(isset($_GET['id'])){
 
-                        require './view/admin/edit-emission.php';
+
                     }else {
-                        require './view/admin/edit-emission.php';
+                       $emission = new EmissionControllerAdmin();
+                       $emission->ajouterEmission ();
                     }
                 }else{
                     $emission = new EmissionControllerAdmin();
                     $emission->showEmission();
 
                 }
+
 
 
                 break;
@@ -77,11 +83,14 @@ class Router{
                         require './view/admin/edit-programme.php';
                     }else {
                         require './view/admin/edit-programme.php';
+
                     }
+
                 }else{
 
                     $programme = new ProgrammeControllerAdmin();
                     $programme->showProgramme();
+
                 }
 
 
@@ -92,7 +101,8 @@ class Router{
                     if(isset($_GET['id'])){
                         require './view/admin/edit-page.php';
                     }else {
-                        require './view/admin/edit-page.php';
+                       $page = new PageControllerAdmin();
+                       $page->ajouterPage ();
                     }
                 }else{
                   $page = new PageControllerAdmin();
@@ -103,16 +113,22 @@ class Router{
                 break;
             }
             case 'messages' :{
-                require './view/admin/messages.php';
+              $message = new MessageControllerAdmin();
+              $message = $message->showAllmessages();
                 break;
             }
+
+
+
+
 
              case 'editeurs' :{
             if(isset($_GET['edit'])){
                 if(isset($_GET['id'])){
                     require './view/admin/add-editeur.php';
                 }else {
-                    require './view/admin/add-editeur.php';
+                   $editeur = new EditeurControllerAdmin();
+                   $editeur->ajouterEditeur ();
                 }
             }else{
                 $editeur = new EditeurControllerAdmin();
@@ -122,6 +138,7 @@ class Router{
 
 
             break;
+
         }
 
 

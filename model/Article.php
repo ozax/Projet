@@ -46,18 +46,18 @@ class Article{
         $reponse = $db->query("SELECT COUNT(*) FROM article");
         return $reponse->fetch($db::FETCH_ASSOC)["COUNT(*)"];
     }
-    public function ajouterArticle($titre,$contenu,$image,$date,$idEditeur)
+    public function ajouterArticle($titre,$contenu,$image)
     {
         $db = $this->db;
 
-        $query = $db->prepare("INSERT INTO `article`(`titre`,`contenu`,`image`,`datePublication`,`idEditeur`)
-	  VALUES(:titre,:contenu,:image,:date)");
+        $query = $db->prepare("INSERT INTO `article`(`titre`,`contenu`,`image`,`datePublication`  )
+	  VALUES(:titre,:contenu,:image,NOW())");
         return $query->execute(array(
             'titre' => $titre,
             'contenu' => $contenu,
             'image'=>$image,
-            'date' => $date,
-            'idEditeur'=> $idEditeur
+
+
         ));
     }
 

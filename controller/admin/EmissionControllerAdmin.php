@@ -27,9 +27,11 @@ class EmissionControllerAdmin
 
     public function ajouterEmission(){
 
-        $emission = new Emission();
-        $emission = $emission->ajouterEmission($_POST["sujet"], $_POST["description"],$_POST["animateur"],$_POST["dateDiffusion"],$_POST["heurDebut"],$_POST["heurFin"],$_POST["datePublication"],$_POST["Fichier"]);
-
+        if (isset($_POST["sujet"])) {
+            $emission = new Emission();
+            $emission = $emission->ajouterEmission ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["jour"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["Fichier"]);
+        }
+        require './view/admin/edit-emission.php';
 
     }
 

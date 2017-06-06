@@ -19,10 +19,12 @@ class ArticleControllerAdmin
 
 
     public function showArticle(){
-
+        require "./config/config.php";
 
         $article = new Article();
        $article = $article->getAllArticle();
+
+
 
         require './view/admin/articles.php';
 
@@ -30,12 +32,13 @@ class ArticleControllerAdmin
     }
 
     public function ajouterArticle(){
+        if (isset($_POST["titre"])){
+            $article = new Article();
+            $article = $article->ajouterArticle (htmlspecialchars ($_POST["titre"]), $_POST["contenu"], htmlspecialchars ($_POST["image"]));
+        }
 
-        $article = new Article();
-        $article = $article->ajouterArticle($_POST["titre"],$_POST["image"],$_POST["contenu"],$_POST["datePublication"],$_POST["idEditeur"]);
-        $titre = $article["titre"];
-        $contenu = $article["contenu"];
         require './view/admin/edit-article.php';
+
 
     }
 

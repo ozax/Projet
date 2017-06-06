@@ -21,11 +21,13 @@ class ProgrammeControllerAdmin
     }
 
 
-    public function ajouterProgramme(){
+
+    public function ajouterProgramme($sujet,$description,$heurDebut,$heurFin,$animateur,$jour){
 
 
         $programme= new Programme();
-        $programme = $programme->AjouterProgramme($_POST["sujet"], $_POST["description"],$_POST["animateur"],$_POST["dateDiffusion"],$_POST["heurDebut"],$_POST["heurFin"],$_POST["datePublication"]);
+        $programme = $programme->AjouterProgramme(htmlspecialchars($sujet),htmlspecialchars($description),htmlspecialchars($heurFin),htmlspecialchars($heurDebut),htmlspecialchars ($animateur),htmlspecialchars ($jour));
+        require './view/admin/edit-programme.php';
 
     }
 

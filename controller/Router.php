@@ -49,6 +49,7 @@ class Router{
             }
             case 'grille' :{
 
+
                $programme = new ProgrammeController();
                $programme->showProgramme();
 
@@ -70,7 +71,7 @@ class Router{
             }
             case 'page' :{
                 if(isset($route[1]) && $route[1] > 0){
-                    $page = new \controller\ControlPage();
+                    $page = new \controller\PageContoller();
                     $page->showPage(intval($route[1]));
                 }else{
                     header("Location: $repertory/404");

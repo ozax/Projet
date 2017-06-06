@@ -11,30 +11,14 @@
                     <th>E-mail :</th>
                     <th>Date d'envoie :</th>
                 </tr></thead>
+                <?php foreach ($message as $message):?>
                 <tr>
-                    <td><a href="message1.html">Objet 1</a></td>
-                    <td>Nom 1</td>
-                    <td>E-mail 1</td>
-                    <td>22/02/2017</td>
+                    <td><a href=""><?=$message["objet"]?></a></td>
+                    <td><?=$message["nomExpditeur"]?></td>
+                    <td><?=$message["emailExpditeur"]?></td>
+                    <td><?=$message["dateEnvoie"]?></td>
                 </tr>
-                <tr>
-                    <td><a href="message1.html">Objet 2</a></td>
-                    <td>Nom 2</td>
-                    <td>E-mail 2</td>
-                    <td>23/02/2017</td>
-                </tr>
-                <tr>
-                    <td><a href="message1.html">Objet 3</a></td>
-                    <td>Nom 3</td>
-                    <td>E-mail 3</td>
-                    <td>24/02/2017</td>
-                </tr>
-                <tr>
-                    <td><a href="message1.html">Objet 4</a></td>
-                    <td>Nom 4</td>
-                    <td>E-mail 4</td>
-                    <td>25/02/2017</td>
-                </tr>
+<?php endforeach;?>
             </table>
         </div>
     </div>

@@ -4,18 +4,18 @@
 
     </div>
     <div class="panel-body">
-        <form methode='post' action="emission.php">
+        <form method='POST' action="">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Ajouter une Emission</div></h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <label>Le titre :</label>
-                    <input type="text" name='titre' class="form-control" placeholder="Titre" required>
+                    <input type="text" name='sujet' class="form-control" placeholder="Titre" required>
                 </div>
                 <div class="form-group">
                     <label>Jour de semaine :</label>
-                    <select class="form-control">
+                    <select class="form-control" name="jour">
                         <option>Samedi</option>
                         <option>Dimanche</option>
                         <option>Lundi</option>
@@ -27,15 +27,19 @@
                 </div>
                 <div class="form-group">
                     <label>Heure-Debut :</label>
-                    <input type="time" name='hdebut' class="form-control" required>
+                    <input type="time" name='heurDebut' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Heure-Fin :</label>
-                    <input type="time" name='hdebut' class="form-control" required>
+                    <input type="time" name='heurFin' class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Animateur:</label>
+                    <input type="text" name='animateur' class="form-control" placeholder="animateur" required>
                 </div>
                 <div class="form-group">
                     <label for="audio"><span class="glyphicon glyphicon-headphones icon" aria-hidden="true"></span> le fichier audio :</label>
-                    <input type="file" name="audio" id="audio"/>
+                    <input type="file" name="Fichier" id="audio"/>
                 </div>
                 <div class="form-group">
                     <div class="form-group">

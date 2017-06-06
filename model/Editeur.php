@@ -28,15 +28,15 @@ class Editeur
         $reponse = $this->db->query("SELECT * FROM Editeur");
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
-    public function ajouterEditeur($nom, $prenom, $email, $motDePasse)
+    public function ajouterEditeur($nom, $prenom, $email)
     {
         $db = $this->db;
-        $query = $db->prepare("INSERT INTO Editeur(nom, prenom, email, motDePasse) VALUES (:nom, :prenom, :email, :motDePasse)");
+        $query = $db->prepare("INSERT INTO Editeur(nom, prenom, email, motDePasse='123') VALUES (:nom, :prenom, :email)");
         return $query->execute(array(
             'nom' => $nom,
             'prenom' => $prenom,
             'email' => $email,
-            'motDePasse' => $motDePasse
+
         ));
     }
 

@@ -3,7 +3,7 @@
         <h3 class="panel-title">Pages</h3>
     </div>
     <div class="panel-body">
-        <form methode='post' action='page.php'>
+        <form method='POST' action="">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ajouter une page</div></h4>
             </div>

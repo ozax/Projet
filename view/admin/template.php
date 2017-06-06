@@ -14,7 +14,7 @@
 <body>
 <div id="custom-bootstrap-menu" class="navbar-default " role="navigation">
     <div class="container">
-        <div class="navbar-header"><a class="navbar-brand" href="#">Espace Administratif</a>
+        <div class="navbar-header"><a class="navbar-brand" href="./admin.php?p=tableau-de-bord">Espace Administratif</a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
         </div>
@@ -37,7 +37,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-left hidden-xs">
-                <li><a href=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
+                <li><a href="./admin.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
                 <li><a href="?p=messages&edit"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
                 <li><a target="_blank" href="<?=$repertory?>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Aller vers le site</a>
                 </li></ul>
@@ -48,7 +48,7 @@
                         <span>Profil</span>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href=""><span class="glyphicon glyphicon-pencil"></span> Modifier Profil</a>
+                        <li><a href="./admin.php?p=profile"><span class="glyphicon glyphicon-pencil"></span> Modifier Profil</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="login.html"><span class="glyphicon glyphicon-off red"></span> Se deconnecter</a>
@@ -64,7 +64,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10">
-                <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Gestion  <small> de la Radio</small></h1>
+                <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Gestion  <small> du site </small></h1>
             </div>
             <div class="col-md-2">
                 <div class="dropdown create">

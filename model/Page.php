@@ -42,6 +42,21 @@ class Page{
         return $reponse->fetch($db::FETCH_ASSOC)["COUNT(*)"];
     }
 
+    public function ajouterPage($titre,$contenu)
+    {
+        $db = $this->db;
+
+        $query = $db->prepare("INSERT INTO `page`(`titre`,`contenu`,`datePublication` )
+	  VALUES(:titre,:contenu,NOW())");
+        return $query->execute(array(
+            'titre' => $titre,
+            'contenu' => $contenu,
+
+
+
+        ));
+    }
+
 }
 
 ?>

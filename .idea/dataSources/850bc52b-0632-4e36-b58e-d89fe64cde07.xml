@@ -142,119 +142,127 @@
       <DataType>int(2)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="40" parent="12" name="idEditeur">
+    <column id="40" parent="12" name="jour">
+      <Position>12</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <index id="41" parent="12" name="idEditeur">
       <ColNames>idEditeur</ColNames>
     </index>
-    <key id="41" parent="12" name="PRIMARY">
+    <key id="42" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idProgramme</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="42" parent="13" name="idMessage">
+    <column id="43" parent="13" name="idMessage">
       <Position>1</Position>
       <DataType>int(10)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="43" parent="13" name="nomExpditeur">
+    <column id="44" parent="13" name="nomExpditeur">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="44" parent="13" name="emailExpditeur">
+    <column id="45" parent="13" name="emailExpditeur">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="13" name="objet">
+    <column id="46" parent="13" name="objet">
       <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="13" name="contenu">
+    <column id="47" parent="13" name="contenu">
       <Position>5</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="13" name="dateEnvoie">
+    <column id="48" parent="13" name="dateEnvoie">
       <Position>6</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="48" parent="13" name="PRIMARY">
+    <key id="49" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idMessage</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="49" parent="14" name="idPage">
+    <column id="50" parent="14" name="idPage">
       <Position>1</Position>
       <DataType>int(2)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="50" parent="14" name="titre">
+    <column id="51" parent="14" name="titre">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="14" name="contenu">
+    <column id="52" parent="14" name="contenu">
       <Position>3</Position>
       <DataType>longtext|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="14" name="datePublication">
+    <column id="53" parent="14" name="datePublication">
       <Position>4</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="14" name="idEditeur">
+    <column id="54" parent="14" name="idEditeur">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <key id="54" parent="14" name="PRIMARY">
+    <key id="55" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idPage</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="55" parent="15" name="idProgramme">
+    <column id="56" parent="15" name="idProgramme">
       <Position>1</Position>
       <DataType>int(4)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="56" parent="15" name="sujet">
+    <column id="57" parent="15" name="sujet">
       <Position>2</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="57" parent="15" name="description">
+    <column id="58" parent="15" name="description">
       <Position>3</Position>
       <DataType>varchar(2000)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="58" parent="15" name="animateur">
+    <column id="59" parent="15" name="animateur">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="15" name="dateDiffusion">
+    <column id="60" parent="15" name="dateDiffusion">
       <Position>5</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="15" name="heurDebut">
+    <column id="61" parent="15" name="heurDebut">
       <Position>6</Position>
       <DataType>time(1)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="61" parent="15" name="heurFin">
+    <column id="62" parent="15" name="heurFin">
       <Position>7</Position>
       <DataType>time(1)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="62" parent="15" name="datePublication">
+    <column id="63" parent="15" name="datePublication">
       <Position>8</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="15" name="jour">
+      <Position>9</Position>
+      <DataType>varchar(25)|0</DataType>
     </column>
   </database-model>
 </dataSource>

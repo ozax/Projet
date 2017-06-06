@@ -3,7 +3,7 @@
         <h3 class="panel-title">Editeurs</h3>
     </div>
     <div class="panel-body">
-        <form mehotde="post" action="editeur.php" >
+        <form method="post"  >
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Ajouter un Editeur</div></h4>
             </div>
@@ -20,8 +20,10 @@
                     <label>E-mail :</label>
                     <input type="email" name='email' class="form-control" placeholder="Email" required>
                 </div>
+
+
                 <div class="modal-footer">
-                    <button type="submit" name='bediteur' class="btn btn-primary">Sauvegarder</button>
+                    <button type="submit"  class="btn btn-primary">Sauvegarder</button>
                     <a href='index.html' class="btn btn-danger">Annuler</a>
                 </div>
         </form>

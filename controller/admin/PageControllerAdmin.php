@@ -16,6 +16,19 @@ class PageControllerAdmin
         require './view/admin/pages.php';
     }
 
+    public function ajouterPage()
+    {
+        if (isset($_POST["titre"])) {
+
+            $page = new Page();
+            $page = $page->ajouterPage (htmlspecialchars ($_POST["titre"]), $_POST["contenu"]);
+
+        }
+require './view/admin/edit-page.php';
+    }
+
+
+
 
 
 }

@@ -8,12 +8,14 @@
         <div class="modal-header">
 
         </div>
+
         <div class="modal-body">
-            <p><b> Objet : </b> Objet 1</p>
-            <p><b> Nom : </b> Nom 1</p>
-            <p><b> E-mail : </b> E-mail 1</p>
-            <p><b> Date : </b> Date 1</p>
-            <p><b> Message : </b> Exemple de message envoyé par l'utilisateur</p>
+            <p><b> Objet : </b>objet</p>
+            <p><b> Nom : </b> nom</p>
+            <p><b> E-mail : </b> mail</p>
+            <p><b> Date : </b> date </p>
+            <p><b> Message : </b>message </p>
+
 
             <form methode='post' action='#' enctype="multipart/form-data">
                 <div class="form-group">

@@ -3,28 +3,28 @@
         <h3 class="panel-title">Articles</h3>
     </div>
     <div class="panel-body">
-        <form methode='post' action='admin.php?<?php echo "post=article" ?>' enctype="multipart/form-data">
+        <form method='POST' action='' >
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Ajouter un article</div></h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <label>Le titre :</label>
-                    <input type="text" name='titre' class="form-control" placeholder=""   required>
+                    <input type="text" name='titre' class="form-control" placeholder="titre"    required>
 
 
                 </div>
                 <div class="form-group">
                     <label for="icone"><span class="glyphicon glyphicon-picture icon" aria-hidden="true"></span> Image (JPG, PNG ou GIF) :</label>
-                    <input type="file" name="icone" id="icone"/>
+                    <input type="file" name="image" id="icone"/>
                     <div class="form-group">
                     </div>
                     <label>Le contenu :</label>
-                    <textarea name='contenu' class="form-control tinymce" placeholder="Contenu"><?php if(isset($contenu)) echo $contenu ?>
+                    <textarea name='contenu' class="form-control tinymce" placeholder="Contenu">
                                     </textarea> </textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" name='barticle' class="btn btn-primary">Sauvegarder</button>
+                    <button type="submit" class="btn btn-primary">Sauvegarder</button>
                     <a href='index.html' class="btn btn-danger">Annuler</a>
                 </div>
         </form>
