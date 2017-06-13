@@ -1,12 +1,10 @@
 <?php
 
-ob_start();
+require './Services/Autoloader.php';
 
-require './engine/Autoloader.php';
-\engine\Autoloader::register();
+\Services\Autoloader::register();
 
-new controller\Router();
+require './config/router.php';
 
-ob_end_flush();
 
 ?>

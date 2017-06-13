@@ -2,7 +2,7 @@
 ###################################################
 # Informations de connection a la base de donnée. #
 ###################################################
-header('Content-type: text/html; charset=UTF-8');
+if (!session_id()) @session_start();
 
 	$config = array(
 		"db_name" => "radio-soummam",
