@@ -2,12 +2,12 @@
 <div class="container">
     <h1 class="title-style">Rechercher sur radio Soummam</h1>
     <div class="home-news">
-        <form class="search-form row">
+        <form method="get" action="" class="search-form row">
             <div class="col-lg-12">
                 <div class="input-group">
                     <input type="text" value="<?= $key ?>" name="key" class="form-xcontrol" placeholder="Rechercher...">
                     <span class="input-group-btn">
-        <button class="btn btn-primary " type="button">Recherche</button>
+        <button class="btn btn-primary " type="submit">Recherche</button>
       </span>
                 </div>
                 <!-- /input-group -->
@@ -23,7 +23,7 @@
                             <div class="search-img" style="background-image: url('./images/news/Emmanuel-Macron.jpg');">
                             </div>
                             <div class="media-body">
-                                <a href="<?=$repertory ?>/actualites/<?=$result["idArticle"]?>"><h3><?= $result['titre'] ?></h3></a>
+                                <a href="<?=$repertory ?>/actualites/<?=$result["idArticle"]?>"><h3><?= str_replace($key, '<span style="background-color: #ffff42">'.$key.'</span>', $result['titre']) ?></h3></a>
                                 <p>
                                     <?=substr(strip_tags($result["contenu"]), 0, 150)?>
                                 </p>
