@@ -70,24 +70,21 @@ class Article{
         ));
     }
 
-    public function modifierArticle($id,$titre,$contenu,$image,$date,$idEditeur){
+    public function modifierArticle($id,$titre,$contenu,$image){
         $db = $this->db;
-        $query = $db->prepare("UPDATE article SET titre= :t, contenu =:c,image=:i,
-	          datePublication =:d, idEditeur=:ie WHERE article.idArticle=$id");
+        $query = $db->prepare("UPDATE article SET titre= :t, contenu =:c,image=:i WHERE article.idArticle=$id");
         return $query->execute(array(
 
             't' => $titre,
             'c' => $contenu,
             'i'=>$image,
-            'd' =>$date,
-            'ie'=> $idEditeur
         ));
 
     }
 
     public function deleteArticle($id){
         $db = $this->db;
-        $query = $db->prepare("DELETE FROM `article` WHERE `article`.`idArticle` =:id LIMIT 1");
+        $query = $db->prepare("DELETE FROM `article` WHERE `article`.`idArticle` =:id");
         return $query->execute(array(
 			'id'=>$id
 			));

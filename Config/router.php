@@ -71,9 +71,35 @@ $router->get('/page/(\d+)' , function () {
     $route->indexArticle();
 });
 
+$router->get('/admin' , function () {
+    $route = new \Controllers\Admin\DashboardControllerAdmin();
+    $route->showHome();
+});
+
+$router->get('/admin/articles' , function () {
+    $route = new \Controllers\Admin\ArticleControllerAdmin();
+    $route->showArticle();
+});
+
+$router->get('/admin/articles/edit/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\ArticleControllerAdmin();
+    $route->editArticle($id);
+});
+
+$router->post('/admin/articles/edit/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\ArticleControllerAdmin();
+    $route->postEditArticle($id);
+});
+
+$router->get('/admin/articles/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\ArticleControllerAdmin();
+    $route->deleteArticle($id);
+});
+
+
 $router->set404(function() {
     header('HTTP/1.1 404 Not Found');
-    require './Views/Radio/404.php';
+    require './Views/404.html';
 });
 
 

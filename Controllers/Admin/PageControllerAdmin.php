@@ -1,8 +1,8 @@
 <?php
 
-namespace Controller\Admin;
+namespace Controllers\Admin;
 
-use model\Page;
+use Models\Page;
 
 
 class PageControllerAdmin

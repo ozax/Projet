@@ -1,11 +1,11 @@
 <?php
-namespace controller\admin;
+namespace Controllers\Admin;
 
 
-use model\Article;
-use model\Editeur;
-use model\Message;
-use model\Page;
+use Models\Article;
+use Models\Editeur;
+use Models\Message;
+use Models\Page;
 
 class DashboardControllerAdmin {
     public function showHome() {
@@ -21,7 +21,7 @@ class DashboardControllerAdmin {
         $messageObj = new Message();
         $nbrMsg = $messageObj->NbrMessage();
 
-        require './view/admin/tableau-de-bord.php';
+        require './Views/Admin/tableau-de-bord.php';
 
     }
 

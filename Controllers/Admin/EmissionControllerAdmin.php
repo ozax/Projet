@@ -1,8 +1,8 @@
 <?php
 
-namespace Controller\admin;
-use model\Emission;
-use model\Editeur;
+namespace Controllers\Admin;
+use Models\Emission;
+use Models\Editeur;
 
 
 class EmissionControllerAdmin
@@ -31,7 +31,7 @@ class EmissionControllerAdmin
             $emission = new Emission();
             $emission = $emission->ajouterEmission ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["jour"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["Fichier"]);
         }
-        require './view/admin/edit-emission.php';
+        require './Views/Admin/edit-emission.php';
 
     }
 

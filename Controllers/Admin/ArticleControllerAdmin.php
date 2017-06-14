@@ -1,9 +1,18 @@
 <?php
-
+/**
+ * Created by PhpStorm.
+ * User: Reda
+ * Date: 26/04/2017
+ * Time: 21:51
+ */
 
 namespace Controllers\Admin;
 
 
+use Models\Article;
+use Models\Editeur;
+use Models\Autoload;
+use Services\FlashMessages;
 
 class ArticleControllerAdmin
 {
@@ -18,7 +27,7 @@ class ArticleControllerAdmin
 
 
 
-        require './view/admin/articles.php';
+        require './Views/Admin/articles.php';
 
 
     }
@@ -34,16 +43,32 @@ class ArticleControllerAdmin
 
     }
 
-    public function modifierArticle(){
+    public function editArticle($id){
 
-        $article = new Article();
-        $article = $article->modifierArticle($_GET["idArticle"],$_POST["titre"],$_POST["image"],$_POST["contenu"],$_POST["datePublication"],$_POST["idEditeur"]);
+        $articles = new Article($id);
+        $articles = $articles->getArticle($id);
+        $_SESSION['article']['titre'] = $articles['titre'];
+        $_SESSION['article']['image'] = $articles['image'];
+        $_SESSION['article']['contenu'] = $articles['contenu'];
+        require './Views/Admin/edit-article.php';
+    }
+
+    public function postEditArticle($id){
+        require "./config/config.php";
+
+        $articles = new Article($id);
+        $articles = $articles->modifierArticle($id, htmlspecialchars ($_POST["titre"]), $_POST["contenu"], htmlspecialchars ($_POST["image"]));
+        $msg = new FlashMessages();
+        $msg->success('L\'article a bien été modifier', $repertory.'/admin/articles');
 
     }
-    public function supprimerArticle(){
 
+    public function deleteArticle($id){
+        require "./config/config.php";
         $article = new Article();
-        $article = $article->deleteArticle($_GET["idArticle"]);
+        $article = $article->deleteArticle($id);
+        $msg = new FlashMessages();
+        $msg->success('L\'article a bien été supprimer', $repertory.'/admin/articles');
     }
 
 

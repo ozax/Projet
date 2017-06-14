@@ -4,13 +4,13 @@
     </a>
     <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-pencil icon" aria-hidden="true"></span> Articles <span class="glyphicon glyphicon-menu-down badge2" aria-hidden="true"></span></a>
     <div class="collapse" id="collapseExample">
-        <a href="<?='?p=articles' ?>" id="collapseExample" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des articles</a>
-        <a href="?p=articles&edit" id="collapseExample" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter un article</a>
+        <a href="<?=$repertory ?>/admin/articles" id="collapseExample" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des articles</a>
+        <a href="<?=$repertory ?>/admin/articles/add" id="collapseExample" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter un article</a>
     </div>
     <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"><span class="icon"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></span> Emissions<span class="glyphicon glyphicon-menu-down badge2" aria-hidden="true"></span></a>
     <div class="collapse" id="collapseExample2">
-        <a href="<?='?p=emissions' ?>" id="collapseExample2" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des emissions</a>
-        <a href="<?='?p=emissions&edit' ?>" id="collapseExample2" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter une emission</a>
+        <a href="<?=$repertory ?>/admin/emissions" id="collapseExample2" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des emissions</a>
+        <a href="<?=$repertory ?>/admin/emissions/add" id="collapseExample2" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter une emission</a>
     </div>
     <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3"><span class="icon"><span class="glyphicon glyphicon-time" aria-hidden="true"></span></span> Programmes<span class="glyphicon glyphicon-menu-down badge2" aria-hidden="true"></span></a>
     <div class="collapse" id="collapseExample3">

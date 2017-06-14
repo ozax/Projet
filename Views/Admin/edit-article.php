@@ -1,3 +1,4 @@
+<?php require "./Views/Admin/header.php"; ?>
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Articles</h3>
@@ -10,18 +11,18 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Le titre :</label>
-                    <input type="text" name='titre' class="form-control" placeholder="titre"    required>
+                    <input value="<?= $_SESSION['article']['titre'] ?>" type="text" name='titre' class="form-control" placeholder="titre" required>
+
 
 
                 </div>
                 <div class="form-group">
                     <label for="icone"><span class="glyphicon glyphicon-picture icon" aria-hidden="true"></span> Image (JPG, PNG ou GIF) :</label>
-                    <input type="file" name="image" id="icone"/>
+                    <input value="<?= $_SESSION['article']['image'] ?>" type="file" name="image" id="icone"/>
                     <div class="form-group">
                     </div>
                     <label>Le contenu :</label>
-                    <textarea name='contenu' class="form-control tinymce" placeholder="Contenu">
-                                    </textarea> </textarea>
+                    <textarea name='contenu' class="form-control tinymce" placeholder="Contenu"><?= $_SESSION['article']['contenu'] ?></textarea> </textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Sauvegarder</button>
@@ -31,3 +32,4 @@
     </div>
 </div>
 </div>
+<?php require "./Views/Admin/footer.php"; ?>

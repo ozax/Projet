@@ -6,8 +6,8 @@
  * Time: 20:35
  */
 
-namespace controller\admin;
-use model\Programme;
+namespace Controllers\Admin;
+use Models\Programme;
 
 class ProgrammeControllerAdmin
 {

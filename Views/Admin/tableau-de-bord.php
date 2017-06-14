@@ -1,4 +1,4 @@
-<!-- Website Overview -->
+<?php require "./Views/Admin/header.php"; ?>
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Vue d'ensemble</h3>
@@ -31,9 +31,12 @@
         </div>
     </div>
 </div>
+<?php
+$message = new Controllers\Admin\MessageControllerAdmin();
+$message->showAllmessages();
+?>
 
 
-
-
+<?php require "./Views/Admin/footer.php"; ?>
 
 

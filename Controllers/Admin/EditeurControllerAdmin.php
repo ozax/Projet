@@ -6,8 +6,8 @@
  * Time: 21:50
  */
 
-namespace controller\admin;
-use model\Editeur;
+namespace Controllers\Admin;
+use Models\Editeur;
 
 class EditeurControllerAdmin
 {
@@ -16,7 +16,7 @@ class EditeurControllerAdmin
         $editeur = new Editeur();
         $editeur = $editeur->getAllEditeur();
 
-        require './view/admin/editeurs.php';
+        require './Views/Admin/editeurs.php';
     }
 
     public function ajouterEditeur(){
@@ -24,7 +24,7 @@ class EditeurControllerAdmin
         $editeur = new Editeur();
         $editeur = $editeur->ajouterEditeur(htmlspecialchars ($_POST["nom"]),$_POST["prenom"],$_POST["email"]);
     }
-    require './view/admin/add-editeur.php';
+    require './Views/Admin/add-editeur.php';
     }
 
 

@@ -6,8 +6,8 @@
  * Time: 00:59
  */
 
-namespace Controller\Admin;
-use model\Message;
+namespace Controllers\Admin;
+use Models\Message;
 
 
 class MessageControllerAdmin
@@ -16,7 +16,7 @@ class MessageControllerAdmin
         $message = new Message();
         $message = $message->AllMessage();
 
-        require './view/admin/messages.php';
+        require './Views/Admin/messages.php';
     }
 
 }
