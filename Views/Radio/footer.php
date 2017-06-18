@@ -35,7 +35,7 @@
         <div class="row">
 
             <div class="col-sm-6 footer-logo">
-                <a href="#">
+                <a href="<?=$repertory ?>">
                     <img class="pull-left" src="<?=$repertory ?>/static/images/logo-55x56.png" alt="Logo radio Soummam" />
                     <div class="pull-left">
                         <h1>RADIO SOUMMAM</h1>

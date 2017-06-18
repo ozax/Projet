@@ -24,7 +24,7 @@ class Programme
     public function getAllProgramme()
     {
         $db = $this->db;
-        $reponse = $this->db->query("SELECT * FROM emission ORDER BY idProgramme DESC WHERE type='programme'");
+        $reponse = $this->db->query("SELECT * FROM emission WHERE type='programme' ORDER BY idProgramme DESC");
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
     public function AjouterProgramme($sujet,$description, $heurDebut, $heurFin,$animateur,$type='programme',$jour){

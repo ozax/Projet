@@ -13,7 +13,7 @@ class PageControllerAdmin
         $page = new Page();
         $page = $page->getAllPage();
 
-        require './view/admin/pages.php';
+        require './Views/Admin/pages.php';
     }
 
     public function ajouterPage()

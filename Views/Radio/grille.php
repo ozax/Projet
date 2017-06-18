@@ -20,7 +20,7 @@
             <?php foreach($programme as $programme): ?>
             <section class="timeline-item">
                 <div class="timeline-item-details">
-                    <time class="timeline-item-details-date"><?=$programme["heurDebut"]?> à <?=$programme["heurFin"]?></time>
+                    <time class="timeline-item-details-date"><?=substr($programme["heurDebut"],0,5)?> à <?=substr($programme["heurFin"],0,5)?></time>
                     <!-- Marqueur -->
                     <div class="timeline-item-details-marker"></div>
                     <!-- Contenu -->

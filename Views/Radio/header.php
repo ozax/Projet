@@ -16,7 +16,7 @@
 
 <header>
     <div class="container">
-        <a href="#">
+        <a href="<?=$repertory ?>">
             <div class="logo">
                 <img class="pull-left" src="<?=$repertory ?>/static/images/logo-69x71.png" alt="Logo radio Soummam" />
                 <div class="pull-left">

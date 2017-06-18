@@ -1,3 +1,4 @@
+<?php require "./Views/Admin/header.php"; ?>
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Editeurs</h3>
@@ -40,3 +41,4 @@
     </div>
 </div>
 </div>
+<?php require "./Views/Admin/footer.php"; ?>

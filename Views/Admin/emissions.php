@@ -1,3 +1,4 @@
+<?php require "./Views/Admin/header.php"; ?>
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Emissions</h3>
@@ -22,6 +23,11 @@
         </ul>
     </div>
     <div class="panel-body">
+        <?php
+        $msg1 = new \Services\FlashMessages();
+        if (isset($msg1))
+            $msg1->display();
+        ?>
         <div class="table-responsive">
             <table id="example" class="table table-striped table-bordered" cellspacing="0">
                 <thead><tr>
@@ -34,12 +40,13 @@
                 </tr></thead>
                 <?php foreach ($emission as $emission):?>
                 <tr>
-                    <td><h1></h1><?=$emission["sujet"]?><h1/></td>
+                    <td><?=$emission["sujet"]?></td>
                     <td><?=$emission["heurDebut"]?></td>
                     <td><?=$emission["heurFin"]?></td>
                     <td><?=$emission["animateur"]?></td>
                     <td></td>
-                    <td><a class="btn btn-default" href="./admin.php?p=emissions&edit='<?=$emission["idProgramme"]?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#semission"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
+                    <td><a class="btn btn-default" href="<?=$repertory?>/admin/emissions/edit/<?=$emission["idProgramme"]?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                        <a class="btn btn-danger" data-toggle="modal" data-target="#semission"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
                 </tr>
                 <?php endforeach;?>
 
@@ -47,7 +54,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="semission" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="semission<?=$emission["idProgramme"]?>" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <!-- Le contenu du modal-->
         <div class="modal-content">

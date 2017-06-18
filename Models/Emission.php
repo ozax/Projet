@@ -18,7 +18,7 @@ public function __construct(){
     public function getAllEmission()
     {
         $db = $this->db;
-        $reponse = $this->db->query("SELECT * FROM emission ORDER BY idProgramme DESC");
+        $reponse = $this->db->query("SELECT * FROM emission WHERE type='emission' ORDER BY heurDebut");
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 
@@ -29,7 +29,12 @@ public function __construct(){
         return $reponse -> fetchAll ($db::FETCH_ASSOC);
     }
 
-
+    public function getEmission($id)
+    {
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM emission WHERE idProgramme = $id and type='emission'");
+        return $reponse->fetch($db::FETCH_ASSOC);
+    }
 
     public function ajouterEmission($sujet,$description,$animateur,$heurDebut,$heurFin,$Fichier,$jour)
     {
@@ -47,6 +52,28 @@ public function __construct(){
             'jour' => $jour
 
 
+        ));
+    }
+    public function modifierEmission($id,$sujet,$description,$heurDebut,$heurFin,$animateur,$fichier,$jour){
+        $db = $this->db;
+        $query = $db->prepare("UPDATE emission SET sujet =:s, description =:d,heurDebut=:hd, heurFin =:hf, animateur =:f, jour=:j WHERE emission.idProgramme=$id");
+        return $query->execute(array(
+
+            's' => $sujet,
+            'd' => $description,
+            'hd'=>$heurDebut,
+            'hf'=>$heurFin,
+            'a'=>$animateur,
+            'f'=>$fichier,
+            'j'=>$jour,
+        ));
+
+    }
+    public function supprimerEmission($id){
+        $db = $this->db;
+        $query = $db->prepare("DELETE FROM `emission` WHERE `emission`.`idProgramme` =:id");
+        return $query->execute(array(
+            'id'=>$id
         ));
     }
 

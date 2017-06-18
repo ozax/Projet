@@ -15,7 +15,7 @@
 <body>
 <div id="custom-bootstrap-menu" class="navbar-default " role="navigation">
     <div class="container">
-        <div class="navbar-header"><a class="navbar-brand" href="./admin.php?p=tableau-de-bord">Espace Administratif</a>
+        <div class="navbar-header"><a class="navbar-brand" href="<?=$repertory?>/admin"> Espace Administratif</a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
         </div>
@@ -38,7 +38,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-left hidden-xs">
-                <li><a href="./admin.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
+                <li><a href="<?=$repertory?>/admin"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
                 <li><a href="?p=messages&edit"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
                 <li><a target="_blank" href="<?=$repertory?>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Aller vers le site</a>
                 </li></ul>
@@ -74,17 +74,17 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="?p=articles&edit">Article</a>
+                        <li><a href="<?=$repertory?>/admin/articles">Article</a>
                         </li>
-                        <li><a href="?p=emissions&edit">Emission</a>
+                        <li><a href="<?=$repertory?>/admin/emissions">Emission</a>
                         </li>
-                        <li><a href="?p=programmes&edit">Programme</a>
+                        <li><a href="<?=$repertory?>/admin/programmes">Programme</a>
                         </li>
-                        <li><a href="?p=pages&edit">Page</a>
+                        <li><a href="<?=$repertory?>/admin/pages">Page</a>
                         </li>
-                        <li><a href="?p=editeurs&edit">Editeur</a>
+                        <li><a href="<?=$repertory?>/admin/editeurs">Editeur</a>
                         </li>
-                        <li><a href="?p=messages&edit">Message</a>
+                        <li><a href="<?=$repertory?>/admin/messages">Message</a>
                         </li>
                     </ul>
                 </div>

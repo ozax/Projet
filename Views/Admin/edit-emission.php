@@ -1,3 +1,4 @@
+<?php require "./Views/Admin/header.php"; ?>
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Emissions</h3>
@@ -11,7 +12,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Le titre :</label>
-                    <input type="text" name='sujet' class="form-control" placeholder="Titre" required>
+                    <input type="text" value="<?= $_SESSION['emission']['sujet'] ?>" name='sujet' class="form-control" placeholder="Titre" required>
                 </div>
                 <div class="form-group">
                     <label>Jour de semaine :</label>
@@ -27,15 +28,15 @@
                 </div>
                 <div class="form-group">
                     <label>Heure-Debut :</label>
-                    <input type="time" name='heurDebut' class="form-control" required>
+                    <input type="time" value="<?= $_SESSION['emission']['heurDebut'] ?>" name='heurDebut' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Heure-Fin :</label>
-                    <input type="time" name='heurFin' class="form-control" required>
+                    <input type="time" value="<?= $_SESSION['emission']['heurFin'] ?>" name='heurFin' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Animateur:</label>
-                    <input type="text" name='animateur' class="form-control" placeholder="animateur" required>
+                    <input type="text" value="<?= $_SESSION['emission']['animateur'] ?>" name='animateur' class="form-control" placeholder="animateur" required>
                 </div>
                 <div class="form-group">
                     <label for="audio"><span class="glyphicon glyphicon-headphones icon" aria-hidden="true"></span> le fichier audio :</label>
@@ -44,10 +45,10 @@
                 <div class="form-group">
                     <div class="form-group">
                         <label>La description :</label>
-                        <textarea name="description" class="form-control tinymce" placeholder="Contenu"></textarea>
+                        <textarea name="description"  class="form-control tinymce" placeholder="Contenu" ><?= $_SESSION['emission']['description'] ?></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" name='bemission' class="btn btn-primary">Sauvegarder</button>
+                        <button type="submit"  class="btn btn-primary">Sauvegarder</button>
                         <a href='index.html' class="btn btn-danger">Annuler</a>
         </form>
     </div>

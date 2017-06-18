@@ -3,6 +3,8 @@
 namespace Controllers\Admin;
 use Models\Emission;
 use Models\Editeur;
+use Models\Autoload;
+use Services\FlashMessages;
 
 
 class EmissionControllerAdmin
@@ -17,9 +19,7 @@ class EmissionControllerAdmin
         $emission = $emission->getAllEmission();
 
 
-
-
-        require './view/admin/emissions.php';
+        require './Views/Admin/emissions.php';
 
 
 
@@ -35,15 +35,34 @@ class EmissionControllerAdmin
 
     }
 
-    public function modifierEmission(){
-        $emission = new Emission();
-        $emission = $emission->modifierEmission($_GET["idProgramme"],$_POST["sujet"], $_POST["description"],$_POST["animateur"],$_POST["dateDiffusion"],$_POST["heurDebut"],$_POST["heurFin"],$_POST["datePublication"],$_POST["Fichier"]);
+    public function editEmission($id){
+        $emission = new Emission($id);
+        $emission = $emission->getEmission($id);
+        $_SESSION['emission']['sujet'] = $emission['sujet'];
+        $_SESSION['emission']['description'] = $emission['description'];
+        $_SESSION['emission']['animateur'] = $emission['animateur'];
+        $_SESSION['emission']['heurDebut'] = $emission['heurDebut'];
+        $_SESSION['emission']['heurFin'] = $emission['heurFin'];
+        $_SESSION['emission']['jour'] = $emission['jour'];
+        require './Views/Admin/edit-emission.php';
     }
 
-    public function supprimerEmission (){
-        $emission = new Emission();
-        $emission = $emission->supprimerEmission($_GET["idProgramme"]);
+    public function postEditEmission($id){
+        require "./config/config.php";
 
+        $emission = new Emission($id);
+        $emission = $emission->modifierEmission($id,$_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["jour"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["Fichier"]);
+        $msg1= new FlashMessages();
+        $msg1->success('L\'emission a bien été modifié', $repertory.'/admin/emissions');
+
+    }
+
+    public function deleteEmission($id){
+        require "./config/config.php";
+        $emission = new Emission();
+        $emission = $emission->SupprimerEmission($id);
+        $msg = new FlashMessages();
+        $msg->success('L\'emission a bien été supprimé', $repertory.'/admin/emissions');
     }
 
 }

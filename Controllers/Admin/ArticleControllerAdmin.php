@@ -59,7 +59,7 @@ class ArticleControllerAdmin
         $articles = new Article($id);
         $articles = $articles->modifierArticle($id, htmlspecialchars ($_POST["titre"]), $_POST["contenu"], htmlspecialchars ($_POST["image"]));
         $msg = new FlashMessages();
-        $msg->success('L\'article a bien été modifier', $repertory.'/admin/articles');
+        $msg->success('L\'article a bien été modifié', $repertory.'/admin/articles');
 
     }
 

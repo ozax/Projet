@@ -95,6 +95,35 @@ $router->get('/admin/articles/delete/(\d+)' , function ($id) {
     $route = new \Controllers\Admin\ArticleControllerAdmin();
     $route->deleteArticle($id);
 });
+$router->get('/admin/emissions' , function () {
+    $route = new \Controllers\Admin\EmissionControllerAdmin();
+    $route->showEmission ();
+});
+$router->get('/admin/emissions/edit/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\EmissionControllerAdmin();
+    $route->editEmission($id);
+
+});
+
+$router->post('/admin/emissions/edit/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\EmissionControllerAdmin();
+    $route->postEditEmission($id);
+});
+
+$router->get('/admin/emissions/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\EmissionControllerAdmin();
+    $route->deleteEmission ($id);
+
+});
+$router->get('/admin/editeurs' , function () {
+    $route = new \Controllers\Admin\EditeurControllerAdmin();
+    $route->showEditor();
+});
+
+$router->get('/admin/pages' , function () {
+    $route = new \Controllers\Admin\PageControllerAdmin();
+    $route->showAllPage();
+});
 
 
 $router->set404(function() {
