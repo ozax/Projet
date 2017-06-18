@@ -48,4 +48,11 @@ class Editeur
         return $reponse->fetch($db::FETCH_ASSOC)["COUNT(*)"];
     }
 
+    public function getLogin($email, $pass){
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT (idEditeur) FROM Editeur WHERE email = '$email' AND motDePasse = '$pass'");
+        // SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
+        return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
 }

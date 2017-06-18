@@ -40,15 +40,20 @@ footer{position: absolute;
         <section id="main">
             <div class="container">
                 <div class="row">
+                    <?php
+                    $msg = new \Services\FlashMessages();
+                    if (isset($msg))
+                        $msg->display();
+                    ?>
                     <div class="col-md-4 col-md-offset-4">
-                        <form id="login" methode="post" action="index.html" class="well">
+                        <form id="login" method="post" action="" class="well">
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="email" class="form-control" placeholder="exemple@exemple.com" required>
+                                <input name="email" type="email" class="form-control" placeholder="exemple@exemple.com" required>
                             </div>
                             <div class="form-group">
                                 <label>Mot de passe</label>
-                                <input type="password" class="form-control" placeholder="mot de passe" required>
+                                <input name="pass" type="password" class="form-control" placeholder="mot de passe" required>
                             </div>
                             <button  type="submit" name='connexion' class="btn btn-primary">Se connecter</button> ou <a href="radio/home.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Aller vers le site</a>
                         </form>

@@ -71,9 +71,40 @@ $router->get('/page/(\d+)' , function () {
     $route->indexArticle();
 });
 
+$router->before('GET|POST', '/admin/.*', function() {
+    require 'Config/config.php';
+    if (!isset($_SESSION['admin'])) {
+        header("Location: ". $repertory. "/login");
+        exit();
+    }
+});
+
+
 $router->get('/admin' , function () {
-    $route = new \Controllers\Admin\DashboardControllerAdmin();
-    $route->showHome();
+    require 'Config/config.php';
+    if (!isset($_SESSION['admin'])) {
+        header("Location: ". $repertory. "/admin/login");
+        exit();
+    }else{
+        $route = new \Controllers\Admin\DashboardControllerAdmin();
+        $route->showHome();
+    }
+});
+
+
+$router->get('/login' , function () {
+    $route = new \Controllers\Admin\ProfilControllerAdmin();
+    $route->login();
+});
+
+$router->post('/login' , function () {
+    $route = new \Controllers\Admin\ProfilControllerAdmin();
+    $route->postLogin();
+});
+
+$router->get('/logout' , function () {
+    $route = new \Controllers\Admin\ProfilControllerAdmin();
+    $route->logout();
 });
 
 $router->get('/admin/articles' , function () {

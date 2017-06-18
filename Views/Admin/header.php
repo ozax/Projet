@@ -52,7 +52,7 @@
                         <li><a href="./admin.php?p=profile"><span class="glyphicon glyphicon-pencil"></span> Modifier Profil</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><span class="glyphicon glyphicon-off red"></span> Se deconnecter</a>
+                        <li><a href="<?=$repertory?>/logout"><span class="glyphicon glyphicon-off red"></span> Se deconnecter</a>
                         </li>
                     </ul>
                 </li>
