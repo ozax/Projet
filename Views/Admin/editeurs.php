@@ -5,6 +5,11 @@
     </div>
 
     <div class="panel-body">
+        <?php
+        $msg5 = new \Services\FlashMessages();
+        if (isset($msg5))
+            $msg5->display();
+        ?>
         <table id="example" class="table table-striped table-bordered responsive" cellspacing="0">
             <thead><tr>
                 <th>Nom</th>
@@ -17,7 +22,7 @@
                 <td><?=$editeur["nom"]?></td>
                 <td><?=$editeur["prenom"]?></td>
                 <td><?=$editeur["email"]?></td>
-                <td><a class="btn btn-default" href=./admin.php?p=editeurs&edit='<?=$editeur["idEditeur"]?>"><!--en cliquant sure le bouton ,la page de modification (qui est la méme que la page d'ajout) va s'afficher avec un formulaire en affichant les ancien champs déja remplits  --><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sediteur"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td></tr>
+                <td><a class="btn btn-default" href=""><!--en cliquant sure le bouton ,la page de modification (qui est la méme que la page d'ajout) va s'afficher avec un formulaire en affichant les ancien champs déja remplits  --><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> <a class="btn btn-danger" data-toggle="modal" data-target="#sediteur"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td></tr>
             <?php endforeach;?>
         </table>
     </div>

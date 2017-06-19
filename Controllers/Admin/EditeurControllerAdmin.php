@@ -8,6 +8,7 @@
 
 namespace Controllers\Admin;
 use Models\Editeur;
+use Services\FlashMessages;
 
 class EditeurControllerAdmin
 {
@@ -20,11 +21,12 @@ class EditeurControllerAdmin
     }
 
     public function ajouterEditeur(){
-        if (isset($_POST["nom"])){
+        require "./config/config.php";
         $editeur = new Editeur();
         $editeur = $editeur->ajouterEditeur(htmlspecialchars ($_POST["nom"]),$_POST["prenom"],$_POST["email"]);
-    }
-    require './Views/Admin/add-editeur.php';
+        $msg5= new FlashMessages();
+        $msg5->success('L\'editeur a bien été ajouté', $repertory.'/admin/editeurs');
+
     }
 
 

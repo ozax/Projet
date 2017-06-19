@@ -189,6 +189,15 @@ $router->post('/admin/pages/add' , function () {
     $route->ajouterPage();
 });
 
+$router->get('/admin/editeurs/add' , function () {
+    require './Views/Admin/add-editeur.php';
+});
+
+$router->post('/admin/editeurs/add' , function () {
+    $route = new \Controllers\Admin\EditeurControllerAdmin();
+    $route->ajouterEditeur();
+});
+
 
 
 

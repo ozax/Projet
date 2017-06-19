@@ -32,11 +32,12 @@ class Editeur
     public function ajouterEditeur($nom, $prenom, $email)
     {
         $db = $this->db;
-        $query = $db->prepare("INSERT INTO Editeur(nom, prenom, email, motDePasse='123') VALUES (:nom, :prenom, :email)");
+        $query = $db->prepare("INSERT INTO Editeur(nom, prenom, email, motDePasse) VALUES (:nom, :prenom, :email,for ($s = '', $i = 0, $z = strlen($a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789')-1; $i != 15; $x = rand(0,$z), $s .= $a{$x}, $i++);
+echo $s;)");
         return $query->execute(array(
             'nom' => $nom,
             'prenom' => $prenom,
-            'email' => $email,
+            'email' => $email
 
         ));
     }
