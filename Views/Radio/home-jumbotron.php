@@ -6,9 +6,11 @@
                         <div class="col-xs-10 this-time vcenter">
                             <div class="text-right ">
                                 <h6>En ce moment</h6>
+                                <?php if(isset($jumbotoron['dateDiffusion'])):?>
                                 <h5>Le <?=$jumbotoron['dateDiffusion'] ?> à <?=substr($jumbotoron['heurDebut'],0,5)?></h5>
                                 <h1><?=$jumbotoron['sujet'] ?></h1>
                                 <i>Présenté par <?=$jumbotoron['animateur'] ?></i>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="col-xs-2 padding-zero">

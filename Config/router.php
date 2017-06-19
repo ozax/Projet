@@ -28,22 +28,22 @@ $router->get('/actualites/(\d+)' , function ($id) {
 
 $router->get('/replay' , function () {
     $route = new \Controllers\Radio\EmissionController();
-    $route->showEmission();
+    $route->showEmission('mercredi');
 });
 
-$router->get('/replay/(samedi|dimanche|lundi|mardi|mercredi|jeudi|vendredi)' , function () {
+$router->get('/replay/(samedi|dimanche|lundi|mardi|mercredi|jeudi|vendredi)' , function ($day) {
     $route = new \Controllers\Radio\EmissionController();
-    $route->showEmission();
+    $route->showEmission($day);
 });
 
 $router->get('/grille' , function () {
     $route = new \Controllers\Radio\ProgrammeController();
-    $route->showProgramme();
+    $route->showProgramme('mercredi');
 });
 
-$router->get('/grille/(\w+)' , function () {
-    $route = new \Controllers\Radio\ArticleController();
-    $route->indexArticle();
+$router->get('/grille/(samedi|dimanche|lundi|mardi|mercredi|jeudi|vendredi)' , function ($day) {
+    $route = new \Controllers\Radio\ProgrammeController();
+    $route->showProgramme($day);
 });
 
 $router->get('/direct' , function () {

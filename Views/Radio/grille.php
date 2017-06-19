@@ -3,13 +3,13 @@
     <h1 class="title-style">Grille des programmes</h1>
     <div class="nav-programme">
         <ul class="list-unstyled list-inline">
-            <li class="active"><a href="#">Samedi</a></li>
-            <li><a href="#">Dimanche</a></li>
-            <li><a href="#">Lundi</a></li>
-            <li><a href="#">Mardi</a></li>
-            <li><a href="#">Mercredi</a></li>
-            <li><a href="#">Jeudi</a></li>
-            <li><a href="#">Vendredi</a></li>
+            <li <?php if($day == 'samedi') echo 'class="active"' ?>><a href="<?=$repertory ?>/grille/samedi">Samedi</a></li>
+            <li <?php if($day == 'dimanche') echo 'class="active"' ?>><a href="<?=$repertory ?>/grille/dimanche">Dimanche</a></li>
+            <li <?php if($day == 'lundi') echo 'class="active"' ?>><a href="<?=$repertory ?>/grille/lundi">Lundi</a></li>
+            <li <?php if($day == 'mardi') echo 'class="active"' ?>><a href="<?=$repertory ?>/grille/mardi">Mardi</a></li>
+            <li <?php if($day == 'mercredi') echo 'class="active"' ?>><a href="<?=$repertory ?>/grille/mercredi">Mercredi</a></li>
+            <li <?php if($day == 'jeudi') echo 'class="active"' ?>><a href="<?=$repertory ?>/grille/jeudi">Jeudi</a></li>
+            <li <?php if($day == 'vendredi') echo 'class="active"' ?>><a href="<?=$repertory ?>/grille/vendredi">Vendredi</a></li>
         </ul>
     </div>
 

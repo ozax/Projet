@@ -6,7 +6,7 @@ use Models\Emission;
 
 class EmissionController{
 
-    public function showEmission()
+    public function showEmission($day)
     {
         require 'config/config.php';
         $emission = new Emission();

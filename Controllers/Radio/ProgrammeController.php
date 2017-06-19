@@ -13,7 +13,7 @@ class ProgrammeController{
         require './Views/Radio/home-jumbotron.php';
     }
 
-    public function showProgramme(){
+    public function showProgramme($day){
 
         $programme = new Programme();
         $programme = $programme->getAllProgramme();
