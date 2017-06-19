@@ -74,17 +74,17 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="<?=$repertory?>/admin/articles">Article</a>
+                        <li><a href="<?=$repertory?>/admin/articles/add">Article</a>
                         </li>
-                        <li><a href="<?=$repertory?>/admin/emissions">Emission</a>
+                        <li><a href="<?=$repertory?>/admin/emissions/add">Emission</a>
                         </li>
-                        <li><a href="<?=$repertory?>/admin/programmes">Programme</a>
+                        <li><a href="<?=$repertory?>/admin/programmes/add">Programme</a>
                         </li>
-                        <li><a href="<?=$repertory?>/admin/pages">Page</a>
+                        <li><a href="<?=$repertory?>/admin/pages/add">Page</a>
                         </li>
-                        <li><a href="<?=$repertory?>/admin/editeurs">Editeur</a>
+                        <li><a href="<?=$repertory?>/admin/editeurs/add">Editeur</a>
                         </li>
-                        <li><a href="<?=$repertory?>/admin/messages">Message</a>
+                        <li><a href="<?=$repertory?>/admin/messages/add">Message</a>
                         </li>
                     </ul>
                 </div>

@@ -32,16 +32,18 @@ class ArticleControllerAdmin
 
     }
 
-    public function ajouterArticle(){
-        if (isset($_POST["titre"])){
-            $article = new Article();
-            $article = $article->ajouterArticle (htmlspecialchars ($_POST["titre"]), $_POST["contenu"], htmlspecialchars ($_POST["image"]));
-        }
 
-        require './view/admin/edit-article.php';
 
+    public function postnewArticle()
+    {
+        require "./config/config.php";
+        $articles = new Article();
+        $articles = $articles->ajouterArticle (htmlspecialchars ($_POST["titre"]), $_POST["contenu"], htmlspecialchars ($_POST["image"]));
+        $msg2= new FlashMessages();
+        $msg2->success('L\'article a bien été ajouté', $repertory.'/admin/articles');
 
     }
+
 
     public function editArticle($id){
 

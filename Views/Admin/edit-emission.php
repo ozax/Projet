@@ -2,7 +2,6 @@
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Emissions</h3>
-
     </div>
     <div class="panel-body">
         <form method='POST' action="">
@@ -56,3 +55,4 @@
 </div>
 </div>
 </div>
+<?php require "./Views/Admin/footer.php"; ?>

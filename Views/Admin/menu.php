@@ -1,5 +1,5 @@
 <div class="list-group">
-    <a href="./admin.php?p=tableau-de-bord" class="list-group-item active main-color-bg">
+    <a href="" class="list-group-item active main-color-bg">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Tableau de bord
     </a>
     <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-pencil icon" aria-hidden="true"></span> Articles <span class="glyphicon glyphicon-menu-down badge2" aria-hidden="true"></span></a>

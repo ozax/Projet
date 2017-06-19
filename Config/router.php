@@ -112,6 +112,16 @@ $router->get('/admin/articles' , function () {
     $route->showArticle();
 });
 
+$router->get('/admin/articles/add' , function () {
+    require './Views/Admin/edit-article.php';
+});
+
+$router->post('/admin/articles/add' , function () {
+    $route = new \Controllers\Admin\ArticleControllerAdmin();
+    $route->postnewArticle ();
+});
+
+
 $router->get('/admin/articles/edit/(\d+)' , function ($id) {
     $route = new \Controllers\Admin\ArticleControllerAdmin();
     $route->editArticle($id);
@@ -126,10 +136,23 @@ $router->get('/admin/articles/delete/(\d+)' , function ($id) {
     $route = new \Controllers\Admin\ArticleControllerAdmin();
     $route->deleteArticle($id);
 });
+
 $router->get('/admin/emissions' , function () {
     $route = new \Controllers\Admin\EmissionControllerAdmin();
     $route->showEmission ();
 });
+
+$router->get('/admin/emissions/add' , function () {
+    require './Views/Admin/edit-emission.php';
+});
+
+$router->post('/admin/emissions/add' , function () {
+   $rout = new \Controllers\Admin\EmissionControllerAdmin();
+   $rout->postnewEmission ();
+
+});
+
+
 $router->get('/admin/emissions/edit/(\d+)' , function ($id) {
     $route = new \Controllers\Admin\EmissionControllerAdmin();
     $route->editEmission($id);

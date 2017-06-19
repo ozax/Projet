@@ -25,13 +25,12 @@ class EmissionControllerAdmin
 
     }
 
-    public function ajouterEmission(){
+    public function postnewEmission(){
 
-        if (isset($_POST["sujet"])) {
             $emission = new Emission();
             $emission = $emission->ajouterEmission ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["jour"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["Fichier"]);
-        }
-        require './Views/Admin/edit-emission.php';
+        $msg3= new FlashMessages();
+        $msg3->success('L\'emission a bien été ajouté', $repertory.'/admin/emissions');
 
     }
 
