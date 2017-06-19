@@ -198,6 +198,13 @@ $router->post('/admin/editeurs/add' , function () {
     $route->ajouterEditeur();
 });
 
+$router->get('/admin/messages' , function () {
+   $route = new \Controllers\Admin\MessageControllerAdmin();
+   $route->showAllmessages ();
+});
+
+
+
 
 
 
