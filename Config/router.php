@@ -66,9 +66,9 @@ $router->get('/recherche' , function () {
 });
 
 
-$router->get('/page/(\d+)' , function () {
-    $route = new \Controllers\Radio\ArticleController();
-    $route->indexArticle();
+$router->get('/page/(\d+)' , function ($id) {
+    $route = new \Controllers\Radio\PageController();
+    $route->showPage($id);
 });
 
 $router->before('GET|POST', '/admin/.*', function() {

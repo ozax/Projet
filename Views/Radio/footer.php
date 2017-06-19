@@ -11,7 +11,7 @@
             }
             echo '
                     <div class="col-sm-6">
-                        <p>- <a class="page-url" href="'. $repertory  .'/page/' . $listePage[$i]["idPage"] .'/'. str_replace(' ', '-', $listePage[$i]["titre"]) . '">' . $listePage[$i]["titre"] . '</a></p>
+                        <p>- <a class="page-url" href="'. $repertory  .'/page/' . $listePage[$i]["idPage"] .'">' . $listePage[$i]["titre"] . '</a></p>
                     </div>
                 ';
             if($i % 2 == 1){
