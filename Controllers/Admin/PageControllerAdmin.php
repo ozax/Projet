@@ -3,6 +3,7 @@
 namespace Controllers\Admin;
 
 use Models\Page;
+use Services\FlashMessages;
 
 
 class PageControllerAdmin
@@ -18,13 +19,12 @@ class PageControllerAdmin
 
     public function ajouterPage()
     {
-        if (isset($_POST["titre"])) {
+        require "./config/config.php";
 
             $page = new Page();
             $page = $page->ajouterPage (htmlspecialchars ($_POST["titre"]), $_POST["contenu"]);
-
-        }
-require './view/admin/edit-page.php';
+            $msg4 = new FlashMessages();
+            $msg4->success('La page a bien été ajouté', $repertory.'/admin/pages');
     }
 
 

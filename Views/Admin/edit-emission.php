@@ -11,7 +11,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Le titre :</label>
-                    <input type="text" value="<?= $_SESSION['emission']['sujet'] ?>" name='sujet' class="form-control" placeholder="Titre" required>
+                    <input type="text" value="" name='sujet' class="form-control" placeholder="Titre" required>
                 </div>
                 <div class="form-group">
                     <label>Jour de semaine :</label>
@@ -27,15 +27,15 @@
                 </div>
                 <div class="form-group">
                     <label>Heure-Debut :</label>
-                    <input type="time" value="<?= $_SESSION['emission']['heurDebut'] ?>" name='heurDebut' class="form-control" required>
+                    <input type="time" value="" name='heurDebut' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Heure-Fin :</label>
-                    <input type="time" value="<?= $_SESSION['emission']['heurFin'] ?>" name='heurFin' class="form-control" required>
+                    <input type="time" value="" name='heurFin' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Animateur:</label>
-                    <input type="text" value="<?= $_SESSION['emission']['animateur'] ?>" name='animateur' class="form-control" placeholder="animateur" required>
+                    <input type="text" value="" name='animateur' class="form-control" placeholder="animateur" required>
                 </div>
                 <div class="form-group">
                     <label for="audio"><span class="glyphicon glyphicon-headphones icon" aria-hidden="true"></span> le fichier audio :</label>
@@ -44,7 +44,7 @@
                 <div class="form-group">
                     <div class="form-group">
                         <label>La description :</label>
-                        <textarea name="description"  class="form-control tinymce" placeholder="Contenu" ><?= $_SESSION['emission']['description'] ?></textarea>
+                        <textarea name="description"  class="form-control tinymce" placeholder="Contenu" ></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="submit"  class="btn btn-primary">Sauvegarder</button>

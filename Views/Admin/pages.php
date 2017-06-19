@@ -4,6 +4,11 @@
         <h3 class="panel-title">Articles</h3>
     </div>
     <div class="panel-body">
+        <?php
+        $msg4 = new \Services\FlashMessages();
+        if (isset($msg4))
+            $msg4->display();
+        ?>
         <table id="example" class="table table-striped table-bordered" cellspacing="0">
             <thead> <tr>
                 <th>Titre :</th>
