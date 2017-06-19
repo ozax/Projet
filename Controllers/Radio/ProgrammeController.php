@@ -10,8 +10,6 @@ class ProgrammeController{
         require 'Config/config.php';
         $jumbotoron = new Programme();
         $jumbotoron = $jumbotoron->getNowEmission();
-        var_dump($jumbotoron);
-        echo date("Y-m-d");
         require './Views/Radio/home-jumbotron.php';
     }
 
