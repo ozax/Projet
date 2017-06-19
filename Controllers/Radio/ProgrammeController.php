@@ -5,6 +5,16 @@ namespace Controllers\Radio;
 use Models\Programme;
 
 class ProgrammeController{
+
+    public function jumbotronAction(){
+        require 'Config/config.php';
+        $jumbotoron = new Programme();
+        $jumbotoron = $jumbotoron->getNowEmission();
+        var_dump($jumbotoron);
+        echo date("Y-m-d");
+        require './Views/Radio/home-jumbotron.php';
+    }
+
     public function showProgramme(){
 
         $programme = new Programme();

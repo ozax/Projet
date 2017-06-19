@@ -1,5 +1,8 @@
 <?php require "./Views/Radio/header.php"; ?>
-<?php require './Views/Radio/home-jumbotron.php'; ?>
+<?php
+$footer = new \Controllers\Radio\ProgrammeController();
+$footer->jumbotronAction();
+?>
     <div class="container">
         <h1 class="title-style">Actualités</h1>
         <div class="home-news">

@@ -5,10 +5,6 @@ namespace Controllers\Radio;
 use Models\Emission;
 
 class EmissionController{
-    public function jumbotronAction(){
-        $repertory = "/Arch";
-        require './Views/Radio/home-jumbotron.php';
-    }
 
     public function showEmission()
     {

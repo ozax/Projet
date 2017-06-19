@@ -6,9 +6,9 @@
                         <div class="col-xs-10 this-time vcenter">
                             <div class="text-right ">
                                 <h6>En ce moment</h6>
-                                <h5>Le vendredi à 19h00</h5>
-                                <h1>LA GRANDE GALERIE DE RADIO CLASSIQUE</h1>
-                                <i>Présenté par Guy Boyer</i>
+                                <h5>Le <?=$jumbotoron['dateDiffusion'] ?> à <?=substr($jumbotoron['heurDebut'],0,5)?></h5>
+                                <h1><?=$jumbotoron['sujet'] ?></h1>
+                                <i>Présenté par <?=$jumbotoron['animateur'] ?></i>
                             </div>
                         </div>
                         <div class="col-xs-2 padding-zero">

@@ -58,9 +58,16 @@ class Programme
         $query = $db->prepare("DELETE FROM `emission` WHERE `idProgramme`=:id");
         return $query->execute(array('id'=>$id));
     }
+
     public Function NbrProgramme(){
         $db = $this->db;
 
         return  $this->db->exec("SELECT COUNT(*) FROM emission where type='programme'");
+    }
+
+    public function getNowEmission(){
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM emission WHERE dateDiffusion = CURDATE() AND heurDebut < CURTIME() AND heurFin > CURTIME()");
+        return $reponse->fetch($db::FETCH_ASSOC);
     }
 }
