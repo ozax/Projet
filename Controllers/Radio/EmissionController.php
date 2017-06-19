@@ -10,7 +10,7 @@ class EmissionController{
     {
         require 'config/config.php';
         $emission = new Emission();
-        $emission = $emission->getAllEmission();
+        $emission = $emission->getAllEmission($day);
 
         require './Views/Radio/replay.php';
 

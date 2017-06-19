@@ -142,7 +142,7 @@ $router->get('/admin/articles/delete/(\d+)' , function ($id) {
 
 $router->get('/admin/emissions' , function () {
     $route = new \Controllers\Admin\EmissionControllerAdmin();
-    $route->showEmission ();
+    $route->showEmission('mercredi');
 });
 
 $router->get('/admin/emissions/add' , function () {

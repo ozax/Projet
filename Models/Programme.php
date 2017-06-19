@@ -21,10 +21,10 @@ class Programme
         $this->db = new Connect();
         $this->db = $this->db->getPdo();
     }
-    public function getAllProgramme()
+    public function getAllProgramme($day)
     {
         $db = $this->db;
-        $reponse = $this->db->query("SELECT * FROM emission WHERE type='programme' ORDER BY idProgramme DESC");
+        $reponse = $this->db->query("SELECT * FROM emission WHERE type='programme' AND jour = '$day' ORDER BY idProgramme DESC");
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
     public function AjouterProgramme($sujet,$description, $heurDebut, $heurFin,$animateur,$type='programme',$jour){

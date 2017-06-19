@@ -1,4 +1,8 @@
-<?php require "./config/config.php"; ?>
+<?php
+require "./config/config.php";
+$url = explode("/", $_GET['url']);
+$url = $url[0];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,12 +63,12 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?=$repertory ?>/accueil">Accueil</a></li>
-                <li><a href="<?=$repertory ?>/actualites">Actualités</a></li>
-                <li><a href="<?=$repertory ?>/replay">Replay</a></li>
-                <li><a href="<?=$repertory ?>/grille">Grille des programme</a></li>
-                <li><a href="<?=$repertory ?>/direct">Direct</a></li>
-                <li><a href="<?=$repertory ?>/contact" class="rightborder">Contactez-nous</a></li>
+                <li <?php if ($url == 'accueil') echo 'class="active"'; ?>><a href="<?=$repertory ?>/accueil">Accueil</a></li>
+                <li <?php if ($url == 'actualites') echo 'class="active"'; ?>><a href="<?=$repertory ?>/actualites">Actualités</a></li>
+                <li <?php if ($url == 'replay') echo 'class="active"'; ?>><a href="<?=$repertory ?>/replay">Replay</a></li>
+                <li <?php if ($url == 'grille') echo 'class="active"'; ?>><a href="<?=$repertory ?>/grille">Grille des programme</a></li>
+                <li <?php if ($url == 'direct') echo 'class="active"'; ?>><a href="<?=$repertory ?>/direct">Direct</a></li>
+                <li <?php if ($url == 'contact') echo 'class="active"'; ?>><a href="<?=$repertory ?>/contact" class="rightborder">Contactez-nous</a></li>
             </ul>
             <form method="get" action="<?=$repertory ?>/recherche" class="hidden-sm navbar-form navbar-left inline-form search-soummam" role="search">
                 <div class="form-group input-group">

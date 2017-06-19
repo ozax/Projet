@@ -16,7 +16,7 @@ class ProgrammeController{
     public function showProgramme($day){
 
         $programme = new Programme();
-        $programme = $programme->getAllProgramme();
+        $programme = $programme->getAllProgramme($day);
         require './Views/Radio/grille.php';
     }
 }

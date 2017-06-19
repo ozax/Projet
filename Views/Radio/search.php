@@ -20,7 +20,7 @@
                 <div class="row line-media">
                     <div class="col-sm-12">
                         <div class="media">
-                            <div class="search-img" style="background-image: url('./images/news/Emmanuel-Macron.jpg');">
+                            <div class="search-img" style="background-image: url('<?=$repertory ?><?=$result["image"]?>');">
                             </div>
                             <div class="media-body">
                                 <a href="<?=$repertory ?>/actualites/<?=$result["idArticle"]?>"><h3><?= str_replace($key, '<span style="background-color: #ffff42">'.$key.'</span>', $result['titre']) ?></h3></a>

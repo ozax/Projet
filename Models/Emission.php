@@ -15,10 +15,10 @@ public function __construct(){
     $this->db = $this->db->getPdo();
 }
 
-    public function getAllEmission()
+    public function getAllEmission($day)
     {
         $db = $this->db;
-        $reponse = $this->db->query("SELECT * FROM emission WHERE type='emission' ORDER BY heurDebut");
+        $reponse = $this->db->query("SELECT * FROM emission WHERE type='emission' and jour = '".$day."' ORDER BY heurDebut");
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 

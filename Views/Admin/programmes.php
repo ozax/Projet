@@ -49,7 +49,7 @@
     <div class="modal-dialog" role="document">
         <!-- Le contenu du modal-->
         <div class="modal-content">
-            <form methode='post' action='suparticle.php' enctype="multipart/form-data">
+            <form method='post' action='suparticle.php' enctype="multipart/form-data">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer une Emission du programme</div></h4>
@@ -65,3 +65,5 @@
     </div>
 </div>
 </div>
+
+<?php require "./Views/Admin/footer.php"; ?>

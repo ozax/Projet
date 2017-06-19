@@ -10,13 +10,13 @@ use Services\FlashMessages;
 class EmissionControllerAdmin
 {
 
-    public function showEmission()
+    public function showEmission($day)
     {
         require "./config/config.php";
 
 
         $emission = new Emission();
-        $emission = $emission->getAllEmission();
+        $emission = $emission->getAllEmission($day);
 
 
         require './Views/Admin/emissions.php';
