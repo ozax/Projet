@@ -180,6 +180,18 @@ $router->get('/admin/pages' , function () {
 });
 
 
+$router->get('/admin/pages/add' , function () {
+    require './Views/Admin/edit-page.php';
+});
+
+$router->post('/admin/pages/add' , function () {
+    $route = new \Controllers\Admin\PageControllerAdmin();
+    $route->ajouterPage();
+});
+
+
+
+
 $router->set404(function() {
     header('HTTP/1.1 404 Not Found');
     require './Views/404.html';
