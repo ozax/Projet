@@ -24,22 +24,22 @@
             <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm">
                 <li><a href="?p=programmes&edit"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
                 </li>
-                <li><a href="?p=articles&edit">Articles</a>
+                <li><a href="">Articles</a>
                 </li>
-                <li><a href="?p=emissions&edit">Emissions</a>
+                <li><a href="">Emissions</a>
                 </li>
-                <li><a href="?p=programmes&edit">Programmes</a>
+                <li><a href="">Programmes</a>
                 </li>
-                <li><a href="?p=pages&edit">Pages</a>
+                <li><a href="">Pages</a>
                 </li>
-                <li><a href="?p=editeurs&edit">Editeurs</a>
+                <li><a href="">Editeurs</a>
                 </li>
-                <li><a href="?p=messages&edit">Messages</a>
+                <li><a href="">Messages</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-left hidden-xs">
                 <li><a href="<?=$repertory?>/admin"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
-                <li><a href="?p=messages&edit"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
+                <li><a href="<?=$repertory ?>/admin/messages"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
                 <li><a target="_blank" href="<?=$repertory?>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Aller vers le site</a>
                 </li></ul>
             <ul class="nav navbar-nav navbar-right">
@@ -49,7 +49,7 @@
                         <span>Profil</span>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="./admin.php?p=profile"><span class="glyphicon glyphicon-pencil"></span> Modifier Profil</a>
+                        <li><a href="<?=$repertory ?>/admin/profil/edit"><span class="glyphicon glyphicon-pencil"></span> Modifier Profil</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="<?=$repertory?>/logout"><span class="glyphicon glyphicon-off red"></span> Se deconnecter</a>

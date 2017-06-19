@@ -113,7 +113,10 @@ $router->get('/admin/articles' , function () {
 });
 
 $router->get('/admin/articles/add' , function () {
-    require './Views/Admin/edit-article.php';
+
+    $route = new \Controllers\Admin\ArticleControllerAdmin();
+    $route->postArticle () ();
+
 });
 
 $router->post('/admin/articles/add' , function () {
@@ -199,8 +202,10 @@ $router->post('/admin/editeurs/add' , function () {
 });
 
 $router->get('/admin/messages' , function () {
+    include_once "./Views/Admin/header.php";
    $route = new \Controllers\Admin\MessageControllerAdmin();
    $route->showAllmessages ();
+    include_once "./Views/Admin/footer.php";
 });
 
 

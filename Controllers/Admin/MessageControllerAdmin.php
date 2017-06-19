@@ -13,6 +13,9 @@ use Models\Message;
 class MessageControllerAdmin
 {
     public function showAllmessages(){
+
+
+
         $message = new Message();
         $message = $message->AllMessage();
 

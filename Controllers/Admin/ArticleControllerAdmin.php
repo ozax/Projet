@@ -31,7 +31,10 @@ class ArticleControllerAdmin
 
 
     }
-
+public function postArticle()
+{
+    require './Views/Admin/edit-article.php';
+}
 
 
     public function postnewArticle()

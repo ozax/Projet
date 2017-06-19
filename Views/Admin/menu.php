@@ -1,5 +1,5 @@
 <div class="list-group">
-    <a href="" class="list-group-item active main-color-bg">
+    <a href="<?=$repertory ?>/admin" class="list-group-item active main-color-bg">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Tableau de bord
     </a>
     <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-pencil icon" aria-hidden="true"></span> Articles <span class="glyphicon glyphicon-menu-down badge2" aria-hidden="true"></span></a>
@@ -27,5 +27,5 @@
         <a href="<?=$repertory ?>/admin/editeurs" id="collapseExample5" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des editeurs</a>
         <a href="<?=$repertory ?>/admin/editeurs/add" id="collapseExample5" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter un editeur</a>
     </div>
-    <a href="<?='?p=messages' ?>" class="list-group-item"><span class="icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span> Messages </span></a>
+    <a href="<?=$repertory ?>/admin/messages" class="list-group-item"><span class="icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span> Messages </span></a>
 </div>
