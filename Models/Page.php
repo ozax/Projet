@@ -59,6 +59,18 @@ class Page{
         ));
     }
 
+    public function modifierPage($id,$titre,$contenu){
+        $db = $this->db;
+        $query = $db->prepare("UPDATE article SET titre= :t, contenu =:c,image=:i WHERE page.idPage=$id");
+        return $query->execute(array(
+
+            't' => $titre,
+            'c' => $contenu,
+
+        ));
+
+    }
+
 }
 
 ?>

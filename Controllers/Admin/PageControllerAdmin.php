@@ -27,6 +27,24 @@ class PageControllerAdmin
             $msg4->success('La page a bien été ajouté', $repertory.'/admin/pages');
     }
 
+    public function editPage($id)
+    {
+        require "./config/config.php";
+        $page = new Page($id);
+        $page = $page->getPage($id);
+        $_SESSION['page']['titre'] = $page['titre'];
+        $_SESSION['page']['contenu'] = $page['contenu'];
+           require './Views/Admin/edit-page.php';
+    }
+
+    public function posteditPage($id)
+    {
+        require "./config/config.php";
+
+        $page = new Page($id);
+        $page = $page->modifierPage ($id, htmlspecialchars ($_POST["titre"]), $_POST["contenu"]);
+    }
+
 
 
 

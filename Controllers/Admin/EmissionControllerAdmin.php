@@ -28,9 +28,11 @@ class EmissionControllerAdmin
     public function postnewEmission(){
         require "./config/config.php";
             $emission = new Emission();
-            $emission = $emission->ajouterEmission ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["jour"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["Fichier"]);
-        $msg2= new FlashMessages();
-        $msg2->success('L\'article a bien été ajouté', $repertory.'/admin/emissions');
+           $emission = $emission->ajouterEmission ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["Fichier"], $_POST["jour"]);
+
+            $msg2= new FlashMessages();
+            $msg2->success('L\'emission a bien été ajouté', $repertory.'/admin/emissions');
+
 
 
     }

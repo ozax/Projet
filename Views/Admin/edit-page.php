@@ -11,11 +11,11 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Le titre :</label>
-                    <input type="text" name='titre' class="form-control" placeholder="Titre" required>
+                    <input type="text" value="<?php if (isset(  $_SESSION['page']['titre']))echo $_SESSION['page']['titre']?> " name='titre' class="form-control" placeholder="Titre" required>
                 </div>
                 <div class="form-group">
                     <label>Le contenu :</label>
-                    <textarea name='contenu' class="form-control tinymce" placeholder="Contenu"></textarea>
+                    <textarea name='contenu'  class="form-control tinymce" placeholder="Contenu"> <?php if (isset(  $_SESSION['page']['contenu']))echo $_SESSION['page']['contenu']?></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name='bpage' class="btn btn-primary">Sauvegarder</button>
@@ -26,4 +26,6 @@
 
     </div>
 </div>
-<?php require "./Views/Admin/footer.php"; ?>
+<?php
+unset($_SESSION['page']);
+require "./Views/Admin/footer.php"; ?>

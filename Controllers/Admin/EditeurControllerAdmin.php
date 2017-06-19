@@ -21,6 +21,7 @@ class EditeurControllerAdmin
     }
 
     public function ajouterEditeur(){
+
         require "./config/config.php";
         $editeur = new Editeur();
         $editeur = $editeur->ajouterEditeur(htmlspecialchars ($_POST["nom"]),$_POST["prenom"],$_POST["email"]);

@@ -36,23 +36,21 @@ public function __construct(){
         return $reponse->fetch($db::FETCH_ASSOC);
     }
 
-    public function ajouterEmission($sujet,$description,$animateur,$heurDebut,$heurFin,$Fichier,$jour)
+    public function ajouterEmission($sujet,$description,$animateur,$heurDebut,$heurFin,$jour)
     {
         $db = $this->db;
 
-        $query = $db->prepare("INSERT INTO `emission`(`sujet`,`description`,`animateur`,`datePublication`, `heurDebut`,type='emission',`heurFin`,,`Fichier`,`jour` )
-	  VALUES(:sujet,:description,:animateur,:heurDebut,:heurFin,:animateur,:jour,NOW())");
+        $query = $db->prepare("INSERT INTO `emission`( sujet, description, animateur, heurDebut, heurFin, jour )
+	  VALUES(:sujet, :description, :animateur, :heurDebut, :heurFin, :jour)");
         return $query->execute(array(
             'sujet' => $sujet,
-            'description' => $description,
+            'description'=> $description,
             'animateur' => $animateur,
             'heurDebut' => $heurDebut,
-            'heurFin'=>$heurFin,
-            'Ficher' => $Fichier,
-            'jour' => $jour
-
-
+            'heurFin' => $heurFin,
+            'jour' => $jour,
         ));
+
     }
     public function modifierEmission($id,$sujet,$description,$heurDebut,$heurFin,$animateur,$fichier,$jour){
         $db = $this->db;

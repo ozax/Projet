@@ -115,7 +115,7 @@ $router->get('/admin/articles' , function () {
 $router->get('/admin/articles/add' , function () {
 
     $route = new \Controllers\Admin\ArticleControllerAdmin();
-    $route->postArticle () ();
+    $route->postArticle () ;
 
 });
 
@@ -151,7 +151,7 @@ $router->get('/admin/emissions/add' , function () {
 
 $router->post('/admin/emissions/add' , function () {
    $rout = new \Controllers\Admin\EmissionControllerAdmin();
-   $rout->postnewEmission ();
+   $rout->postnewEmission();
 
 });
 
@@ -191,6 +191,23 @@ $router->post('/admin/pages/add' , function () {
     $route = new \Controllers\Admin\PageControllerAdmin();
     $route->ajouterPage();
 });
+
+
+$router->get('/admin/pages/edit/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\PageControllerAdmin();
+    $route->editPage($id);
+
+});
+
+$router->post('/admin/pages/edit/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\PageControllerAdmin();
+    $route->posteditPage($id);
+
+});
+
+
+
+
 
 $router->get('/admin/editeurs/add' , function () {
     require './Views/Admin/add-editeur.php';
