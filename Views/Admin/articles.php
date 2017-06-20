@@ -12,14 +12,12 @@
         <table id="example" class="table table-striped table-bordered" cellspacing="0">
             <thead> <tr>
                 <th >Titre</th>
-                <th width="100px">Publié par</th>
-                <th width="100px">Publié le</th>
+                <th width="100px">Publié le)</th>
                 <th width="120px">Action</th>
             </tr></thead>
             <?php foreach($article as $article): ?>
             <tr>
                 <td><?=$article["titre"]?></td>
-                <td></td>
                 <td><?=substr($article['datePublication'],0,10)?> à <?=substr($article['datePublication'],10,6)?></td>
                 <td>
                     <a class="btn btn-default" href="<?=$repertory?>/admin/articles/edit/<?=$article["idArticle"]?>" >

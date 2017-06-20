@@ -35,7 +35,6 @@
                     <th>Heure-Debut :</th>
                     <th>Heure-Fin :</th>
                     <th>Présentée par :</th>
-                    <th>Ajoutée par :</th>
                     <th>Action :</th>
                 </tr></thead>
                 <?php foreach ($emission as $emission):?>
@@ -44,7 +43,6 @@
                     <td><?=$emission["heurDebut"]?></td>
                     <td><?=$emission["heurFin"]?></td>
                     <td><?=$emission["animateur"]?></td>
-                    <td></td>
                     <td><a class="btn btn-default" href="<?=$repertory?>/admin/emissions/edit/<?=$emission["idProgramme"]?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                         <a class="btn btn-danger" data-toggle="modal" data-target="#semission<?=$emission["idProgramme"]?>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
                 </tr>
