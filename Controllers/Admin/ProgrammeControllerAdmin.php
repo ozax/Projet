@@ -8,26 +8,33 @@
 
 namespace Controllers\Admin;
 use Models\Programme;
+use Models\Autoload;
+use Services\FlashMessages;
+
 
 class ProgrammeControllerAdmin
 {
 
-    public function showProgramme(){
+    public function showProgramme($day){
 
-        $programme = new Programme();
-        $programme = $programme->getAllProgramme();
-        require './view/admin/programmes.php';
+        $programme = new Programme($day);
+        $programme = $programme->getAllProgramme($day);
+        require './Views/Admin/programmes.php';
 
     }
 
 
 
-    public function ajouterProgramme($sujet,$description,$heurDebut,$heurFin,$animateur,$jour){
+    public function postnewProgramme(){
+        require "./config/config.php";
+
+        $programme = new Programme();
+        $programme = $programme->ajouterProgramme ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["jour"]);
+
+        $msg1= new FlashMessages();
+        $msg1->success('Le programme a bien été ajouté', $repertory.'/admin/programmes');
 
 
-        $programme= new Programme();
-        $programme = $programme->AjouterProgramme(htmlspecialchars($sujet),htmlspecialchars($description),htmlspecialchars($heurFin),htmlspecialchars($heurDebut),htmlspecialchars ($animateur),htmlspecialchars ($jour));
-        require './view/admin/edit-programme.php';
 
     }
 

@@ -52,18 +52,17 @@ public function __construct(){
         ));
 
     }
-    public function modifierEmission($id,$sujet,$description,$heurDebut,$heurFin,$animateur,$fichier,$jour){
+    public function modifierEmission($id,$sujet,$animateur,$heurDebut,$heurFin,$description,$jour){
         $db = $this->db;
-        $query = $db->prepare("UPDATE emission SET sujet =:s, description =:d,heurDebut=:hd, heurFin =:hf, animateur =:f, jour=:j WHERE emission.idProgramme=$id");
+        $query = $db->prepare("UPDATE emission SET sujet= :sujet, animateur =:animateur ,heurDebut=:heurDebut, heurFin=:heurFin, description=:description, jour=:jour WHERE article.idArticle=$id");
         return $query->execute(array(
 
-            's' => $sujet,
-            'd' => $description,
-            'hd'=>$heurDebut,
-            'hf'=>$heurFin,
-            'a'=>$animateur,
-            'f'=>$fichier,
-            'j'=>$jour,
+            'sujet' => $sujet,
+            'animateur' => $animateur,
+            'heurDebut' => $heurDebut,
+            'heurFin' => $heurFin,
+            'description' => $description,
+            'jour' => $jour,
         ));
 
     }

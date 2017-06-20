@@ -1,9 +1,10 @@
+<?php require "./Views/Admin/header.php"; ?>
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Programmes</h3>
     </div>
     <div class="panel-body">
-        <form method='post' action='?p=programmes&edit'>
+        <form method='POST' action=''>
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Ajouter un programme</div></h4>
             </div>
@@ -47,3 +48,4 @@
         </form>
     </div>
 </div>
+<?php require "./Views/Admin/footer.php"; ?>

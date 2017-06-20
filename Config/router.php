@@ -155,8 +155,8 @@ $router->get('/admin/emissions/add' , function () {
 });
 
 $router->post('/admin/emissions/add' , function () {
-   $rout = new \Controllers\Admin\EmissionControllerAdmin();
-   $rout->postnewEmission();
+   $route = new \Controllers\Admin\EmissionControllerAdmin();
+   $route->postnewEmission();
 
 });
 
@@ -177,10 +177,32 @@ $router->get('/admin/emissions/delete/(\d+)' , function ($id) {
     $route->deleteEmission ($id);
 
 });
+
+$router->get('/admin/programmes' , function () {
+    $route = new \Controllers\Admin\ProgrammeControllerAdmin();
+    $route->showProgramme('mercredi');
+});
+
+$router->get('/admin/programmes/(samedi|dimanche|lundi|mardi|mercredi|jeudi|vendredi)' , function ($day) {
+    $route = new \Controllers\Admin\ProgrammeControllerAdmin($day);
+    $route->showProgramme($day);
+});
+
+$router->get('/admin/programmes/add' , function () {
+    require './Views/Admin/edit-programme.php';
+});
+
+$router->post('/admin/programmes/add' , function () {
+    $route = new \Controllers\Admin\ProgrammeControllerAdmin();
+    $route->postnewProgramme();
+
+});
+
 $router->get('/admin/editeurs' , function () {
     $route = new \Controllers\Admin\EditeurControllerAdmin();
     $route->showEditor();
 });
+
 
 $router->get('/admin/pages' , function () {
     $route = new \Controllers\Admin\PageControllerAdmin();
@@ -221,6 +243,12 @@ $router->get('/admin/editeurs/add' , function () {
 $router->post('/admin/editeurs/add' , function () {
     $route = new \Controllers\Admin\EditeurControllerAdmin();
     $route->ajouterEditeur();
+});
+
+$router->get('/admin/editeurs/delete/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\EditeurControllerAdmin();
+    $route->deleteEditeur ($id);
+
 });
 
 $router->get('/admin/messages' , function () {

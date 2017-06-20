@@ -31,11 +31,11 @@
                 </div>
                 <div class="form-group">
                     <label>Heure-Fin :</label>
-                    <input type="time" value="" name='heurFin' class="form-control" required>
+                    <input type="time" value="<?php if(isset($_SESSION['emission']['heurFin'])) echo $_SESSION['emission']['heurFin']; ?>" name='heurFin' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Animateur:</label>
-                    <input type="text" value="" name='animateur' class="form-control" placeholder="animateur" required>
+                    <input type="text" value="<?php if(isset($_SESSION['emission']['animateur'])) echo $_SESSION['emission']['animateur']; ?>" name='animateur' class="form-control" placeholder="animateur" required>
                 </div>
                 <div class="form-group">
                     <label for="audio"><span class="glyphicon glyphicon-headphones icon" aria-hidden="true"></span> le fichier audio :</label>
@@ -44,7 +44,7 @@
                 <div class="form-group">
                     <div class="form-group">
                         <label>La description :</label>
-                        <textarea name="description"  class="form-control tinymce" placeholder="Contenu" ></textarea>
+                        <textarea name="description"  class="form-control tinymce" placeholder="Contenu" ><?php if(isset($_SESSION['emission']['description'])) echo $_SESSION['emission']['description']; ?></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="submit"  class="btn btn-primary">Sauvegarder</button>

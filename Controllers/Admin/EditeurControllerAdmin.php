@@ -30,6 +30,15 @@ class EditeurControllerAdmin
 
     }
 
+    public function deleteEditeur($id){
+        require "./config/config.php";
+        $editeur = new Editeur();
+        $editeur = $editeur->deleteEditeur($id);
+        $msg = new FlashMessages();
+        $msg->info('L\'editeur a bien été supprimé', $repertory.'/admin/editeurs');
+    }
+
+
 
 
 }

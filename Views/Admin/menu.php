@@ -14,8 +14,8 @@
     </div>
     <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3"><span class="icon"><span class="glyphicon glyphicon-time" aria-hidden="true"></span></span> Programmes<span class="glyphicon glyphicon-menu-down badge2" aria-hidden="true"></span></a>
     <div class="collapse" id="collapseExample3">
-        <a href="<?='?p=programmes' ?>" id="collapseExample3" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des programmes</a>
-        <a href="<?='?p=programmes&edit' ?>" id="collapseExample3" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter un programme</a>
+        <a href="<?=$repertory ?>/admin/programmes" id="collapseExample3" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des programmes</a>
+        <a href="<?=$repertory ?>/admin/programmes/add" id="collapseExample3" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter un programme</a>
     </div>
     <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"><span class="icon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span> Pages<span class="glyphicon glyphicon-menu-down badge2" aria-hidden="true"></span></a>
     <div class="collapse" id="collapseExample4">

@@ -32,14 +32,24 @@ class Editeur
     public function ajouterEditeur($nom, $prenom, $email)
     {
         $db = $this->db;
-        $query = $db->prepare("INSERT INTO Editeur(nom, prenom, email, motDePasse) VALUES (:nom, :prenom, :email, 123)");
-        return $query->execute(array(
+        $query = $db->prepare ("INSERT INTO Editeur(nom, prenom, email, motDePasse) VALUES (:nom, :prenom, :email, 123)");
+        return $query->execute (array(
             'nom' => $nom,
             'prenom' => $prenom,
             'email' => $email
 
         ));
     }
+
+
+        public function deleteEditeur($id){
+        $db = $this->db;
+        $query = $db->prepare("DELETE FROM `editeur` WHERE `editeur`.`idEditeur` =:id");
+        return $query->execute(array(
+            'id'=>$id
+        ));
+    }
+
 
     public Function NbrEditeur(){
         $db = $this->db;

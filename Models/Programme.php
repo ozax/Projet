@@ -27,21 +27,23 @@ class Programme
         $reponse = $this->db->query("SELECT * FROM emission WHERE type='programme' AND jour = '$day' ORDER BY idProgramme DESC");
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
-    public function AjouterProgramme($sujet,$description, $heurDebut, $heurFin,$animateur,$type='programme',$jour){
-        $db = $this->db;
-        $query = $db->prepare("INSERT INTO emission(sujet,description, heurDebut,heurFin,datePublication,animateur,jour,type)
-                       VALUES (:sujet,:description, :heurDebut, :heurFin,:animateur,:jour,:type,NOW()");
-        return $query->execute(
-            array(
-                'sujet'=>$sujet,
-                'description'=>$description,
-                'heurDebut'=>$heurDebut,
-                'heurFin'=>$heurFin,
-                'animateur'=>$animateur,
-                'jour'=>$jour,'type'=>$type,
-            ));
-    }
 
+    public function ajouterProgramme($sujet,$description,$animateur,$heurDebut,$heurFin,$jour)
+    {
+        $db = $this->db;
+
+        $query = $db->prepare("INSERT INTO `emission`( sujet, description, animateur, heurDebut, heurFin, jour, type, datePublication )
+	  VALUES(:sujet, :description, :animateur, :heurDebut, :heurFin, :jour, 'programme' , NOW())");
+        return $query->execute(array(
+            'sujet' => $sujet,
+            'description'=> $description,
+            'animateur' => $animateur,
+            'heurDebut' => $heurDebut,
+            'heurFin' => $heurFin,
+            'jour' => $jour,
+        ));
+
+    }
 
     public function ModifierProgramme( $id,$sujet,$description,$animateur,$dateDiffusion, $heurDebut, $heurFin){
         $db = $this->db;

@@ -55,7 +55,7 @@ class EmissionControllerAdmin
         require "./config/config.php";
 
         $emission = new Emission($id);
-        $emission = $emission->modifierEmission($id,$_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["jour"], $_POST["heurDebut"], $_POST["heurFin"]);
+        $emission = $emission->modifierEmission($id,$_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["jour"]);
         $msg1= new FlashMessages();
         $msg1->success('L\'emission a bien été modifié', $repertory.'/admin/emissions');
 
