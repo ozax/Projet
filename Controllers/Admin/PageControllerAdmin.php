@@ -35,6 +35,7 @@ class PageControllerAdmin
         $_SESSION['page']['titre'] = $page['titre'];
         $_SESSION['page']['contenu'] = $page['contenu'];
            require './Views/Admin/edit-page.php';
+        unset($_SESSION['page']);
     }
 
     public function posteditPage($id)
@@ -43,8 +44,17 @@ class PageControllerAdmin
 
         $page = new Page($id);
         $page = $page->modifierPage ($id, htmlspecialchars ($_POST["titre"]), $_POST["contenu"]);
+        $msg = new FlashMessages();
+        $msg->info('La page a été modifié', $repertory.'/admin/pages');
     }
 
+    public function deletePage($id){
+        require "./config/config.php";
+        $page = new Page();
+        $page = $page->supprimerPage($id);
+        $msg = new FlashMessages();
+        $msg->success('La Page a bien été supprimé', $repertory.'/admin/pages');
+    }
 
 
 

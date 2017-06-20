@@ -61,14 +61,22 @@ class Page{
 
     public function modifierPage($id,$titre,$contenu){
         $db = $this->db;
-        $query = $db->prepare("UPDATE article SET titre= :t, contenu =:c,image=:i WHERE page.idPage=$id");
+        $query = $db->prepare("UPDATE page SET titre=:titre, contenu=:contenu  WHERE idPage=$id");
         return $query->execute(array(
 
-            't' => $titre,
-            'c' => $contenu,
+            'titre' => $titre,
+            'contenu' => $contenu,
 
         ));
 
+    }
+
+    public function supprimerPage($id){
+        $db = $this->db;
+        $query = $db->prepare("DELETE FROM `page` WHERE `idPage` =:id");
+        return $query->execute(array(
+            'id'=>$id
+        ));
     }
 
 }

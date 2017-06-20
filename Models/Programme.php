@@ -55,11 +55,14 @@ class Programme
     }
 
 
-    public function SupprimerProgramme($id){
+    public function supprimerProgramme($id){
         $db = $this->db;
-        $query = $db->prepare("DELETE FROM `emission` WHERE `idProgramme`=:id");
-        return $query->execute(array('id'=>$id));
+        $query = $db->prepare("DELETE FROM `emission` WHERE `idProgramme` =:id");
+        return $query->execute(array(
+            'id'=>$id
+        ));
     }
+
 
     public Function NbrProgramme(){
         $db = $this->db;

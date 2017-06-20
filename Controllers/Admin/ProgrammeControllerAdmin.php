@@ -32,7 +32,7 @@ class ProgrammeControllerAdmin
         $programme = $programme->ajouterProgramme ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["jour"]);
 
         $msg1= new FlashMessages();
-        $msg1->success('Le programme a bien été ajouté', $repertory.'/admin/programmes');
+        $msg1->info('Le programme a bien été ajouté', $repertory.'/admin/programmes');
 
 
 
@@ -44,10 +44,12 @@ class ProgrammeControllerAdmin
         $programme = $programme->ModifierProgramme($_GET["idProgramme"],$_POST["sujet"], $_POST["description"],$_POST["animateur"],$_POST["dateDiffusion"],$_POST["heurDebut"],$_POST["heurFin"],$_POST["datePublication"]);
     }
 
-    public function supprimerProgramme(){
-
+    public function deleteProgramme($id){
+        require "./config/config.php";
         $programme = new Programme();
-        $programme = $programme->SupprimerProgramme($_GET["idProgramme"]);
+        $programme = $programme->supprimerProgramme($id);
+        $msg = new FlashMessages();
+        $msg->success('Le programme a bien été supprimé', $repertory.'/admin/programmes');
     }
 
     public function nbrProgramme(){
