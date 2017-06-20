@@ -1,24 +1,30 @@
+<?php require "./Views/Admin/header.php"; ?>
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Modifier votre profil</h3>
     </div>
     <div class="panel-body">
-        <form methode='post' action='article.php' enctype="multipart/form-data">
+        <?php
+        $msg = new \Services\FlashMessages();
+        if (isset($msg))
+            $msg->display();
+        ?>
+        <form method='post' action='' enctype="multipart/form-data">
             <!-- Le formulaire avec les ancien champs déja saisit est chargé avec php -->
             <div class="modal-header">
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <label>Nom :</label> <!-- l'ancien nom -->
-                    <input type="text" name='Nom' class="form-control" placeholder="Nom" required>
+                    <input value="<?php if (isset($_SESSION['profil']['nom'])) echo $_SESSION['profil']['nom'] ?>" type="text" name='nom' class="form-control" placeholder="Nom" required>
                 </div>
                 <div class="form-group">
                     <label>Prenom :</label> <!-- l'ancien prénom -->
-                    <input type="text" name='Prenom' class="form-control" placeholder="Prenom" required>
+                    <input value="<?php if (isset($_SESSION['profil']['prenom'])) echo $_SESSION['profil']['prenom'] ?>" type="text" name='prenom' class="form-control" placeholder="Prenom" required>
                 </div>
                 <div class="form-group">
                     <label>E-mail :</label> <!-- l'ancien E-mail -->
-                    <input type="email" name='Email' class="form-control" placeholder="E-mail" required>
+                    <input value="<?php if (isset($_SESSION['profil']['email'])) echo $_SESSION['profil']['email'] ?>" type="email" name='email' class="form-control" placeholder="E-mail" required>
                 </div>
                 <div class="form-group">
                     <label>Ancien Mot de passe :</label> <!-- l'ancien mot de passe -->
@@ -26,11 +32,11 @@
                 </div>
                 <div class="form-group">
                     <label>Mot de passe :</label> <!-- le nouveau mot de passe -->
-                    <input type="password" name='mdp' class="form-control" placeholder="Nouveau mot de passe" required>
+                    <input type="password" name='mdp1' class="form-control" placeholder="Nouveau mot de passe" required>
                 </div>
                 <div class="form-group">
                     <label>Confirmer Mot de passe :</label> <!-- confirmer le nouveau mot de passe -->
-                    <input type="password" name='mdp' class="form-control" placeholder="Confirmer mot de passe"
+                    <input type="password" name='mdp2' class="form-control" placeholder="Confirmer mot de passe"
                            required>
                 </div>
                 <div class="modal-footer">
@@ -43,3 +49,5 @@
         </form>
     </div>
 </div>
+
+<?php require "./Views/Admin/footer.php"; ?>

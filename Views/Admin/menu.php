@@ -22,10 +22,12 @@
         <a href="<?=$repertory ?>/admin/pages" id="collapseExample4" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des pages</a>
         <a href="<?=$repertory ?>/admin/pages/add" id="collapseExample4" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter une page</a>
     </div>
+    <?php if($_SESSION['admin']==1) : ?>
     <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5"><span class="icon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span> Editeurs<span class="glyphicon glyphicon-menu-down badge2" aria-hidden="true"></span></a>
     <div class="collapse" id="collapseExample5">
         <a href="<?=$repertory ?>/admin/editeurs" id="collapseExample5" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-list icon2" aria-hidden="true"></span> Liste des editeurs</a>
         <a href="<?=$repertory ?>/admin/editeurs/add" id="collapseExample5" class="collapse list-group-item liste2"><span class="glyphicon glyphicon-plus icon2" aria-hidden="true"></span> Ajouter un editeur</a>
     </div>
+    <?php endif; ?>
     <a href="<?=$repertory ?>/admin/messages" class="list-group-item"><span class="icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span> Messages </span></a>
 </div>

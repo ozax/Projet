@@ -60,9 +60,22 @@ class Editeur
 
     public function getLogin($email, $pass){
         $db = $this->db;
-        $reponse = $this->db->query("SELECT (idEditeur) FROM Editeur WHERE email = '$email' AND motDePasse = '$pass'");
+        $reponse = $this->db->query("SELECT * FROM Editeur WHERE email = '$email' AND motDePasse = '$pass'");
         // SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
         return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
+    public function updateEditeur($id,$nom, $prenom, $email, $pass){
+        $db = $this->db;
+        $query = $db->prepare("UPDATE editeur SET nom=:nom, prenom=:prenom, email=:email, motDePasse=:pass WHERE idEditeur=:id");
+        return $query->execute(array(
+            'id' => $id,
+            'nom' => $nom,
+            'prenom' => $prenom,
+            'email'=>$email,
+            'pass'=>$pass,
+        ));
+
     }
 
 }

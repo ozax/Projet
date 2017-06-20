@@ -258,9 +258,15 @@ $router->get('/admin/messages' , function () {
     include_once "./Views/Admin/footer.php";
 });
 
+$router->get('/admin/profil/edit' , function () {
+    $route = new \Controllers\Admin\ProfilControllerAdmin();
+    $route->editProfil();
+});
 
-
-
+$router->post('/admin/profil/edit' , function () {
+    $route = new \Controllers\Admin\ProfilControllerAdmin();
+    $route->postEditProfil();
+});
 
 
 $router->set404(function() {

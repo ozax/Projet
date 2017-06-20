@@ -43,7 +43,7 @@
                 <li><a target="_blank" href="<?=$repertory?>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Aller vers le site</a>
                 </li></ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a>Bienvenue, Brad <!-- le Nom de l'éditeur ou l'dministrateur --></a></li>
+                <li><a>Bienvenue, <?=$_SESSION['login_name']?> <!-- le Nom de l'éditeur ou l'dministrateur --></a></li>
                 <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="caret"></span> <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                         <span>Profil</span>

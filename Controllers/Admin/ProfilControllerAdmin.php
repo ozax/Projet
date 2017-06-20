@@ -21,10 +21,10 @@ class ProfilControllerAdmin
             $msg = new FlashMessages();
             $msg->success('Authentification échouée', $repertory.'/admin/login');
         }else{
-            if ($login["idEditeur"] == 1)
-                $_SESSION['admin'] = 1;
-            else
-                $_SESSION['admin'] = 0;
+            $_SESSION['login_name'] = $login['nom'].' '.$login['prenom'];
+            $_SESSION['pass'] = $login['motDePasse'];
+            $_SESSION['admin'] = $login["idEditeur"];
+
             header("Location: ". $repertory. "/admin");
         }
 
@@ -34,5 +34,38 @@ class ProfilControllerAdmin
         require 'Config/config.php';
         session_unset();
         header("Location: ". $repertory. "/login");
+    }
+
+    public function editProfil(){
+        require "./config/config.php";
+        $profil = new Editeur();
+        $profil = $profil->getEditeur($_SESSION['admin']);
+        $_SESSION['profil']['nom'] = $profil['nom'];
+        $_SESSION['profil']['prenom'] = $profil['prenom'];
+        $_SESSION['profil']['email'] = $profil['email'];
+        require './Views/Admin/edit-profile.php';
+        unset($_SESSION['profil']);
+    }
+
+    public function postEditProfil()
+    {
+        require "./config/config.php";
+        if($_POST["mdp1"] == $_POST["mdp2"] && $_SESSION['pass'] == md5($_POST["mdp"])){
+            $editeur = new Editeur();
+            $editeur = $editeur->updateEditeur($_SESSION['admin'], $_POST["nom"], $_POST["prenom"], $_POST["email"], md5($_POST["mdp2"]));
+        }else{
+            $editeur = false;
+        }
+
+
+        if($editeur){
+            $msg = new FlashMessages();
+            $msg->info('Votre profil a été modifier', $repertory.'/admin/profil/edit');
+        }else{
+            $msg = new FlashMessages();
+            $msg->warning('Votre profil n\'a été modifier', $repertory.'/admin/profil/edit');
+        }
+
+
     }
 }
