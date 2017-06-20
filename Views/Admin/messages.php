@@ -14,7 +14,7 @@
                 </tr></thead>
                 <?php foreach ($message as $message):?>
                 <tr>
-                    <td><a href=""><?=$message["objet"]?></a></td>
+                    <td><a href="<?=$repertory?>/admin/message/<?=$message["idMessage"]?>"><?=$message["objet"]?></a></td>
                     <td><?=$message["nomExpditeur"]?></td>
                     <td><?=$message["emailExpditeur"]?></td>
                     <td><?=$message["dateEnvoie"]?></td>

@@ -11,11 +11,11 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Le titre de l'émission à  ajouter :</label>
-                    <input type="text" name='sujet' class="form-control" placeholder="Titre" required>
+                    <input type="text" value="<?php if(isset($_SESSION['programme']['sujet'])) echo $_SESSION['programme']['sujet']; ?> " name='sujet' class="form-control" placeholder="Titre" required>
                 </div>
                 <div class="form-group">
                     <label>Jour de semaine :</label>
-                    <select class="form-control" name'jour'>
+                    <select class="form-control" name="jour">
                         <option>Samedi</option>
                         <option>Dimanche</option>
                         <option>Lundi</option>
@@ -27,19 +27,19 @@
                 </div>
                 <div class="form-group">
                     <label>Heure-Debut :</label>
-                    <input type="time" name='heurDebut' class="form-control" required>
+                    <input type="time" value="<?php if(isset($_SESSION['programme']['heurDebut'])) echo $_SESSION['programme']['heurDebut']; ?> " name='heurDebut' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Heure-Fin :</label>
-                    <input type="time" name='heurFin' class="form-control" required>
+                    <input type="time" value="<?php if(isset($_SESSION['programme']['heurFin'])) echo $_SESSION['programme']['heurFin']; ?> " name='heurFin' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Animateur:</label>
-                    <input type="text" name='animateur' class="form-control" placeholder="animateur" required>
+                    <input type="text" value="<?php if(isset($_SESSION['programme']['animateur'])) echo $_SESSION['programme']['animateur']; ?> " name='animateur' class="form-control" placeholder="animateur" required>
                 </div>
                 <div class="form-group">
                     <label>La description :</label>
-                    <textarea name='description' class="form-control tinymce" placeholder="Contenu"></textarea>
+                    <textarea name='description'  class="form-control tinymce" placeholder="Contenu"> <?php if(isset($_SESSION['programme']['description'])) echo $_SESSION['programme']['description']; ?> </textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Sauvegarder</button>

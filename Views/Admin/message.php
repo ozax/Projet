@@ -1,3 +1,4 @@
+<?php require "./Views/Admin/header.php"; ?>
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
         <h3 class="panel-title">Message</h3>
@@ -10,11 +11,11 @@
         </div>
 
         <div class="modal-body">
-            <p><b> Objet : </b>objet</p>
-            <p><b> Nom : </b> nom</p>
-            <p><b> E-mail : </b> mail</p>
-            <p><b> Date : </b> date </p>
-            <p><b> Message : </b>message </p>
+            <p><b> Objet : </b><?=$message["objet"]?></p>
+            <p><b> Nom : </b> <?=$message["nomExpditeur"]?></p>
+            <p><b> E-mail : </b><?=$message["emailExpditeur"]?></p>
+            <p><b> Date : </b> <?=$message["dateEnvoie"]?></p>
+            <p><b> Message : </b><?=$message["contenu"]?> </p>
 
 
             <form methode='post' action='#' enctype="multipart/form-data">

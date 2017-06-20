@@ -38,10 +38,27 @@ class ProgrammeControllerAdmin
 
     }
 
-    public function modifierProgramme(){
+    public function editProgramme($id){
+        $programme = new Programme($id);
+        $programme = $programme->getProgramme($id);
+        $_SESSION['programme']['sujet'] = $programme['sujet'];
+        $_SESSION['programme']['description'] = $programme['description'];
+        $_SESSION['programme']['animateur'] = $programme['animateur'];
+        $_SESSION['programme']['heurDebut'] = $programme['heurDebut'];
+        $_SESSION['programme']['heurFin'] = $programme['heurFin'];
+        $_SESSION['programme']['jour'] = $programme['jour'];
+        require './Views/Admin/edit-programme.php';
+        unset($_SESSION['programme']);
+    }
 
-        $programme= new Programme();
-        $programme = $programme->ModifierProgramme($_GET["idProgramme"],$_POST["sujet"], $_POST["description"],$_POST["animateur"],$_POST["dateDiffusion"],$_POST["heurDebut"],$_POST["heurFin"],$_POST["datePublication"]);
+    public function postEditProgramme($id){
+        require "./config/config.php";
+        $programme = new Programme($id);
+        $programme = $programme->modifierProgramme($id,$_POST["sujet"], $_POST["animateur"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["description"], $_POST["jour"]);
+
+        $msg1= new FlashMessages();
+        $msg1->info('Le programme a bien été modifié', $repertory.'/admin/programmes');
+
     }
 
     public function deleteProgramme($id){

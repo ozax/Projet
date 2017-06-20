@@ -28,6 +28,13 @@ class Programme
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 
+    public function getProgramme($id)
+    {
+        $db = $this->db;
+        $reponse = $this->db->query("SELECT * FROM emission WHERE idProgramme = $id and type='programme'");
+        return $reponse->fetch($db::FETCH_ASSOC);
+    }
+
     public function ajouterProgramme($sujet,$description,$animateur,$heurDebut,$heurFin,$jour)
     {
         $db = $this->db;
@@ -45,13 +52,19 @@ class Programme
 
     }
 
-    public function ModifierProgramme( $id,$sujet,$description,$animateur,$dateDiffusion, $heurDebut, $heurFin){
+    public function modifierProgramme($id,$sujet,$animateur,$heurDebut,$heurFin,$description,$jour){
         $db = $this->db;
-        $query = $db->prepare("UPDATE `emission` SET `sujet`=:sujet,`description`=:description,
-                                 `animateur`=:animateur,`dateDiffusion`=:dateDiffusion, `heurDebut`=:heurDebut,`heurFin`=:heurFin)");
-        return $query->execute(array('sujet'=>$sujet,'id'=>$id,
-            'description'=>$description,'animateur'=>$animateur,
-            'dateDiffusion'=>$dateDiffusion, 'heurDebut'=>$heurDebut,'heurFin'=>$heurFin));
+        $query = $db->prepare("UPDATE emission SET sujet= :sujet, animateur =:animateur ,heurDebut=:heurDebut, heurFin=:heurFin, description=:description, jour=:jour WHERE idProgramme = '".$id."'");
+        return $query->execute(array(
+
+            'sujet' => $sujet,
+            'animateur' => $animateur,
+            'heurDebut' => $heurDebut,
+            'heurFin' => $heurFin,
+            'description' => $description,
+            'jour' => $jour,
+        ));
+
     }
 
 

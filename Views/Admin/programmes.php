@@ -41,7 +41,7 @@
                     <td><?=$programme["datePublication"]?></td>
                     <td><?=$programme["heurDebut"]?></td>
                     <td><?=$programme["heurFin"]?></td>
-                    <td><a class="btn btn-default" href="./admin.php?p=programmes&edit='<?=$programme["idProgramme"]?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                    <td><a class="btn btn-default" href="<?=$repertory?>/admin/programmes/edit/<?=$programme["idProgramme"]?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                         <a class="btn btn-danger" data-toggle="modal" data-target="#sprogramme<?=$programme["idProgramme"]?>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
                 </tr>
     <div class="modal fade" id="sprogramme<?=$programme["idProgramme"]?>" role="dialog" aria-labelledby="myModalLabel">

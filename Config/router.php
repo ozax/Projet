@@ -198,6 +198,17 @@ $router->post('/admin/programmes/add' , function () {
 
 });
 
+$router->get('/admin/programmes/edit/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\ProgrammeControllerAdmin();
+    $route->editProgramme($id);
+
+});
+$router->post('/admin/programmes/edit/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\ProgrammeControllerAdmin();
+    $route->postEditProgramme($id);
+
+});
+
 
 $router->get('/admin/programmes/delete/(\d+)' , function ($id) {
     $route = new \Controllers\Admin\ProgrammeControllerAdmin();
@@ -242,6 +253,12 @@ $router->post('/admin/pages/edit/(\d+)' , function ($id) {
 $router->get('/admin/pages/delete/(\d+)' , function ($id) {
     $route = new \Controllers\Admin\PageControllerAdmin();
     $route->deletePage ($id);
+
+});
+
+$router->get('/admin/message/(\d+)' , function ($id) {
+    $route = new \Controllers\Admin\MessageControllerAdmin();
+    $route->consultMessage($id);
 
 });
 

@@ -32,7 +32,7 @@ class Editeur
     public function ajouterEditeur($nom, $prenom, $email)
     {
         $db = $this->db;
-        $query = $db->prepare ("INSERT INTO Editeur(nom, prenom, email, motDePasse) VALUES (:nom, :prenom, :email, 123)");
+        $query = $db->prepare ("INSERT INTO Editeur(nom, prenom, email, motDePasse) VALUES (:nom, :prenom, :email, '5f4dcc3b5aa765d61d8327deb882cf99')");
         return $query->execute (array(
             'nom' => $nom,
             'prenom' => $prenom,
