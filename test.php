@@ -1,12 +1,12 @@
-<?php
+<!DOCTYPE html>
+<html>
+<body>
 
-use Models\Emission;
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="image" id="image">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
 
-require './Services/Autoloader.php';
-
-\Services\Autoloader::register();
-
-require "./config/config.php";
-$emission = new Emission();
-$emission = $emission->ajouterEmission ('test', 'test','test','10:00','12:00','samedi');
-var_dump ($emission);
+</body>
+</html>
