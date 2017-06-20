@@ -7,19 +7,19 @@
     <div class="liste-jours">
         <ul class="list-unstyled list-inline">
             <li>Choisir le jour :</li>
-            <li class="active"><a href="#">Samedi</a></li>
+            <li <?php if($day == 'samedi') echo 'class="active"' ?>><a href="<?=$repertory ?>/admin/emissions/samedi">Samedi</a></li>
             <li>|</li>
-            <li><a href="#">Dimanche</a></li>
+            <li <?php if($day == 'dimanche') echo 'class="active"' ?>><a href="<?=$repertory ?>/admin/emissions/dimanche">Dimanche</a></li>
             <li>|</li>
-            <li><a href="#">Lundi</a></li>
+            <li <?php if($day == 'lundi') echo 'class="active"' ?>><a href="<?=$repertory ?>/admin/emissions/lundi">Lundi</a></li>
             <li>|</li>
-            <li><a href="#">Mardi</a></li>
+            <li <?php if($day == 'mardi') echo 'class="active"' ?>><a href="<?=$repertory ?>/admin/emissions/mardi">Mardi</a></li>
             <li>|</li>
-            <li><a href="#">Mercredi</a></li>
+            <li <?php if($day == 'mercredi') echo 'class="active"' ?>><a href="<?=$repertory ?>/admin/emissions/mercredi">Mercredi</a></li>
             <li>|</li>
-            <li><a href="#">Jeudi</a></li>
+            <li <?php if($day == 'jeudi') echo 'class="active"' ?>><a href="<?=$repertory ?>/admin/emissions/jeudi">Jeudi</a></li>
             <li>|</li>
-            <li><a href="#">Vendredi</a></li>
+            <li <?php if($day == 'vendredi') echo 'class="active"' ?>><a href="<?=$repertory ?>/admin/emissions/vendredi">Vendredi</a></li>
         </ul>
     </div>
     <div class="panel-body">
@@ -46,32 +46,30 @@
                     <td><?=$emission["animateur"]?></td>
                     <td></td>
                     <td><a class="btn btn-default" href="<?=$repertory?>/admin/emissions/edit/<?=$emission["idProgramme"]?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-                        <a class="btn btn-danger" data-toggle="modal" data-target="#semission"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
+                        <a class="btn btn-danger" data-toggle="modal" data-target="#semission<?=$emission["idProgramme"]?>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
                 </tr>
+                    <div class="modal fade" id="semission<?=$emission["idProgramme"]?>" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <!-- Le contenu du modal-->
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer une Emission</div></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h1 class="h11"><b> Êtes-vous sûr de vouloir continuer ? </b> </h1>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                            <a href="<?=$repertory?>/admin/emissions/delete/<?=$emission["idProgramme"]?>" class="btn btn-danger">Supprimer</a>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
                 <?php endforeach;?>
 
             </table>
         </div>
     </div>
 </div>
-<div class="modal fade" id="semission<?=$emission["idProgramme"]?>" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <!-- Le contenu du modal-->
-        <div class="modal-content">
-            <form methode='post' action='suparticle.php' enctype="multipart/form-data">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer une Emission</div></h4>
-                </div>
-                <div class="modal-body">
-                    <h1 class="h11"><b> Êtes-vous sûr de vouloir continuer ? </b> </h1>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                        <button type="submit" name='barticle' class="btn btn-danger">Supprimer</button>
-                    </div>
-            </form>
-        </div>
-    </div>
-</div>
-</div>
+
 <?php require "./Views/Admin/footer.php"; ?>

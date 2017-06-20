@@ -40,8 +40,8 @@ public function __construct(){
     {
         $db = $this->db;
 
-        $query = $db->prepare("INSERT INTO `emission`( sujet, description, animateur, heurDebut, heurFin, jour )
-	  VALUES(:sujet, :description, :animateur, :heurDebut, :heurFin, :jour)");
+        $query = $db->prepare("INSERT INTO `emission`( sujet, description, animateur, heurDebut, heurFin, jour, type, datePublication )
+	  VALUES(:sujet, :description, :animateur, :heurDebut, :heurFin, :jour, 'emission', NOW())");
         return $query->execute(array(
             'sujet' => $sujet,
             'description'=> $description,

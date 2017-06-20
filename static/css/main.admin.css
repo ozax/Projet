@@ -1,5 +1,5 @@
 body{
-  background:#f4f4f4;
+    background:#f4f4f4;
 }
 
 /* Navbar */
@@ -45,72 +45,72 @@ body{
 
 /* Custom */
 .main-color-bg{
-  background-color: rgba(0, 69, 120, 1) !important;
-  border-color: black !important;
-  color:#ffffff !important;
+    background-color: rgba(0, 69, 120, 1) !important;
+    border-color: black !important;
+    color:#ffffff !important;
 }
 
 /* Header */
 #header{
-  background:#333333;
-  color:#ffffff;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+    background:#333333;
+    color:#ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 #header .create{
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 /* Breadcrumb */
 .breadcrumb{
-  background:#cccccc;
-  color:#333333;
+    background:#cccccc;
+    color:#333333;
 }
 
 .breadcrumb a{
-  color:#333333;
+    color:#333333;
 }
 
 /* Progress Bars */
 .progress-bar{
-  background:#333333;
-  color:#ffffff;
+    background:#333333;
+    color:#ffffff;
 }
 
 .dash-box{
-  text-align:center;
+    text-align:center;
 }
 
 #login{
-  margin-top:30px;
+    margin-top:30px;
 }
 
 /* Footer */
 #footer{
- background-color: rgba(0, 69, 120, 1);
-  color:#ffffff;
-  text-align:center;
-  padding:30px;
-  margin-top:30px;
-  margin-bottom:0px;
+    background-color: rgba(0, 69, 120, 1);
+    color:#ffffff;
+    text-align:center;
+    padding:30px;
+    margin-top:30px;
+    margin-bottom:0px;
 }
 
 
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #ecf0f1;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffbbbc;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffbbbc;
-    background-color: #c0392b;
-  }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffbbbc;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffbbbc;
+        background-color: #c0392b;
+    }
 }
 #dec{
     color: #e74c3c;
@@ -125,12 +125,32 @@ body{
 .clravant{
     color: #e74c3c;
 }
-.badge2 {
-    float: right;
-    color: rgba(0, 69, 120, 1);
+.liste{
+    background:white;
 }
-.badge {
-    padding: 5px 7px;
-    background-color: #d9534f;
-    border-radius: 100%;
+.badge2{
+    float:right;
+    color:rgba(0, 69, 120, 1);}
+.icon2{
+    color:rgba(0, 69, 120, 1);
+}
+.liste2{
+    background: #f4f4f4;
+}
+.red{
+    color:red;
+}
+.liste-jours{
+    margin: 10px 10px;
+}
+.liste-jours li{
+    padding: 10px 5px;
+}
+.liste-jours .active{
+    background-color: #337ab7;
+    border-radius: 4px;
+    padding: 10px;
+}
+.liste-jours .active a{
+    color: white;
 }

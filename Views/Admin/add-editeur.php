@@ -30,3 +30,4 @@
         </form>
     </div>
 </div>
+<?php require "./Views/Admin/footer.php"; ?>

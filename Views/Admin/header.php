@@ -10,7 +10,7 @@
     <!-- Css de  Bootstrap-->
     <link href="<?=$repertory?>/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?=$repertory?>/static/datatable/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="<?=$repertory?>/static/css/main.admin.css?version=2" rel="stylesheet">
+    <link href="<?=$repertory?>/static/css/main.admin.css" rel="stylesheet">
 </head>
 <body>
 <div id="custom-bootstrap-menu" class="navbar-default " role="navigation">

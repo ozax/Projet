@@ -11,7 +11,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Le titre :</label>
-                    <input type="text" value="" name='sujet' class="form-control" placeholder="Titre" required>
+                    <input type="text" value="<?php if(isset($_SESSION['emission']['sujet'])) echo $_SESSION['emission']['sujet']; ?> " name='sujet' class="form-control" placeholder="Titre" required>
                 </div>
                 <div class="form-group">
                     <label>Jour de semaine :</label>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label>Heure-Debut :</label>
-                    <input type="time" value="" name='heurDebut' class="form-control" required>
+                    <input type="time" value="<?php if(isset($_SESSION['emission']['heurDebut'])) echo $_SESSION['emission']['heurDebut']; ?>" name='heurDebut' class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Heure-Fin :</label>

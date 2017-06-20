@@ -145,6 +145,11 @@ $router->get('/admin/emissions' , function () {
     $route->showEmission('mercredi');
 });
 
+$router->get('/admin/emissions/(samedi|dimanche|lundi|mardi|mercredi|jeudi|vendredi)' , function ($day) {
+    $route = new \Controllers\Admin\EmissionControllerAdmin($day);
+    $route->showEmission($day);
+});
+
 $router->get('/admin/emissions/add' , function () {
     require './Views/Admin/edit-emission.php';
 });

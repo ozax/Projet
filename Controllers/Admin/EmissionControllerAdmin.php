@@ -27,8 +27,9 @@ class EmissionControllerAdmin
 
     public function postnewEmission(){
         require "./config/config.php";
+
             $emission = new Emission();
-           $emission = $emission->ajouterEmission ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["Fichier"], $_POST["jour"]);
+           $emission = $emission->ajouterEmission ($_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["jour"]);
 
             $msg2= new FlashMessages();
             $msg2->success('L\'emission a bien été ajouté', $repertory.'/admin/emissions');
@@ -47,13 +48,14 @@ class EmissionControllerAdmin
         $_SESSION['emission']['heurFin'] = $emission['heurFin'];
         $_SESSION['emission']['jour'] = $emission['jour'];
         require './Views/Admin/edit-emission.php';
+        unset($_SESSION['emission']);
     }
 
     public function postEditEmission($id){
         require "./config/config.php";
 
         $emission = new Emission($id);
-        $emission = $emission->modifierEmission($id,$_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["jour"], $_POST["heurDebut"], $_POST["heurFin"], $_POST["Fichier"]);
+        $emission = $emission->modifierEmission($id,$_POST["sujet"], $_POST["description"], $_POST["animateur"], $_POST["jour"], $_POST["heurDebut"], $_POST["heurFin"]);
         $msg1= new FlashMessages();
         $msg1->success('L\'emission a bien été modifié', $repertory.'/admin/emissions');
 
