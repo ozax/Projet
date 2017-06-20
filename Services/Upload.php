@@ -5,9 +5,8 @@ namespace Services;
 
 class Upload
 {
-    public function uploadImage($dir = "upload/images")
+    public function uploadImage($dir)
     {
-        $maxsize = 50000;
         $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
         $extension_upload = strtolower(  substr(  strrchr($_FILES['image']['name'], '.')  ,1)  );
         if ( !in_array($extension_upload,$extensions_valides) ){
@@ -20,10 +19,6 @@ class Upload
             $msg->warning('Erreur lors du transfert');
         }
 
-        if ($_FILES['image']['size'] < $maxsize){
-            $msg = new FlashMessages();
-            $msg->warning('Le fichier est trop gros');
-        }
 
 
         $nom = $dir."/".$_FILES['image']['name'];
@@ -37,7 +32,6 @@ class Upload
 
     public function uploadFile($dir)
     {
-        $maxsize = 500000;
         $extensions_valides = array( 'mp3' , 'wmv');
         $extension_upload = strtolower(  substr(  strrchr($_FILES['file']['name'], '.')  ,1)  );
         if ( !in_array($extension_upload,$extensions_valides) ){

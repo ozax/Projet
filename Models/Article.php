@@ -59,12 +59,13 @@ class Article{
     {
         $db = $this->db;
 
-        $query = $db->prepare("INSERT INTO `article`(`titre`,`contenu`,`image`,`datePublication`  )
-	  VALUES(:titre,:contenu,:image,NOW())");
+        $query = $db->prepare("INSERT INTO `article`(`titre`,`contenu`,`image`,`datePublication`,`idEditeur`)
+	  VALUES(:titre,:contenu,:image,NOW(), :idediteur)");
         return $query->execute(array(
             'titre' => $titre,
             'contenu' => $contenu,
             'image'=>$image,
+            'idediteur' => $_SESSION['admin']
 
 
         ));

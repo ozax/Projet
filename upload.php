@@ -9,10 +9,11 @@ $repertory = "/radio-soummam";
 echo '<pre>';
 var_dump($_FILES);
 echo '</pre>';
+die;
 $target_dir = "upload/images";
 
 $upload = new \Services\Upload();
-$upload->uploadImage("upload/images/emissions");
+$upload->uploadFile("upload/mp3");
 
 $msg = new \Services\FlashMessages();
 if (isset($msg))

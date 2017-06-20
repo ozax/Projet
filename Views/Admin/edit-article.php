@@ -4,7 +4,7 @@
         <h3 class="panel-title">Articles</h3>
     </div>
     <div class="panel-body">
-        <form method='POST' action='' >
+         <form action="" method="post" enctype="multipart/form-data">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Ajouter un article</div></h4>
             </div>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label for="icone"><span class="glyphicon glyphicon-picture icon" aria-hidden="true"></span> Image (JPG, PNG ou GIF) :</label>
-                    <input value="<?= $_SESSION['article']['image'] ?>" type="file" name="image" id="icone"/>
+                    <input type="file" name="image" id="image">
                     <div class="form-group">
                     </div>
                     <label>Le contenu :</label>
