@@ -24,7 +24,7 @@ class Programme
     public function getAllProgramme($day)
     {
         $db = $this->db;
-        $reponse = $this->db->query("SELECT * FROM emission WHERE type='programme' AND jour = '$day' ORDER BY idProgramme DESC");
+        $reponse = $this->db->query("SELECT * FROM emission WHERE type='programme' AND jour = '$day' ORDER BY heurDebut ASC");
         return $reponse->fetchAll($db::FETCH_ASSOC);
     }
 

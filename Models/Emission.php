@@ -36,12 +36,12 @@ public function __construct(){
         return $reponse->fetch($db::FETCH_ASSOC);
     }
 
-    public function ajouterEmission($sujet,$description,$animateur,$heurDebut,$heurFin,$jour)
+    public function ajouterEmission($sujet,$description,$animateur,$heurDebut,$heurFin,$jour,$fichier)
     {
         $db = $this->db;
 
-        $query = $db->prepare("INSERT INTO `emission`( sujet, description, animateur, heurDebut, heurFin, jour, type, datePublication )
-	  VALUES(:sujet, :description, :animateur, :heurDebut, :heurFin, :jour, 'emission', NOW())");
+        $query = $db->prepare("INSERT INTO `emission`( sujet, description, animateur, heurDebut, heurFin, jour, type, datePublication, Fichier )
+	  VALUES(:sujet, :description, :animateur, :heurDebut, :heurFin, :jour, 'emission', NOW(), :fichier)");
         return $query->execute(array(
             'sujet' => $sujet,
             'description'=> $description,
@@ -49,12 +49,13 @@ public function __construct(){
             'heurDebut' => $heurDebut,
             'heurFin' => $heurFin,
             'jour' => $jour,
+            'fichier' => $fichier
         ));
 
     }
-    public function modifierEmission($id,$sujet,$animateur,$heurDebut,$heurFin,$description,$jour){
+    public function modifierEmission($id,$sujet,$animateur,$heurDebut,$heurFin,$description,$jour, $fichier){
         $db = $this->db;
-        $query = $db->prepare("UPDATE emission SET sujet= :sujet, animateur =:animateur ,heurDebut=:heurDebut, heurFin=:heurFin, description=:description, jour=:jour WHERE idProgramme = '".$id."'");
+        $query = $db->prepare("UPDATE emission SET sujet= :sujet, animateur =:animateur ,heurDebut=:heurDebut, heurFin=:heurFin, description=:description, jour=:jour, Fichier=:fichier WHERE idProgramme = '".$id."'");
         return $query->execute(array(
 
             'sujet' => $sujet,
@@ -63,6 +64,7 @@ public function __construct(){
             'heurFin' => $heurFin,
             'description' => $description,
             'jour' => $jour,
+            'fichier' => $fichier
         ));
 
     }

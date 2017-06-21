@@ -4,7 +4,7 @@
         <h3 class="panel-title">Emissions</h3>
     </div>
     <div class="panel-body">
-        <form method='POST' action="">
+        <form action="" method="post" enctype="multipart/form-data">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel"><div class='icon'> <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Ajouter une Emission</div></h4>
             </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group">
                     <label for="audio"><span class="glyphicon glyphicon-headphones icon" aria-hidden="true"></span> le fichier audio :</label>
-                    <input type="file" name="Fichier" id="audio"/>
+                    <input type="file" name="file" id="file"/>
                 </div>
                 <div class="form-group">
                     <div class="form-group">

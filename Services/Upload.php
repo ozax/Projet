@@ -41,13 +41,9 @@ class Upload
 
         if ($_FILES['file']['error'] > 0){
             $msg = new FlashMessages();
-            $msg->warning('Erreur lors du transfert');
+            $msg->warning($_FILES['file']['error']);
         }
 
-        if ($_FILES['file']['size'] < $maxsize){
-            $msg = new FlashMessages();
-            $msg->warning('Le fichier est trop gros');
-        }
 
 
         $nom = $dir."/".$_FILES['file']['name'];

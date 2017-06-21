@@ -82,10 +82,6 @@
                         </li>
                         <li><a href="<?=$repertory?>/admin/pages/add">Page</a>
                         </li>
-                        <li><a href="<?=$repertory?>/admin/editeurs/add">Editeur</a>
-                        </li>
-                        <li><a href="<?=$repertory?>/admin/messages/add">Message</a>
-                        </li>
                     </ul>
                 </div>
             </div>
